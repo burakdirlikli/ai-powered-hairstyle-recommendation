@@ -49,3 +49,7 @@ data/raw/
 samples/output/
 __pycache__/
 .pytest_cache/
+
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints/
