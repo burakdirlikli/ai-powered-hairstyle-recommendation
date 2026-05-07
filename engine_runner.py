@@ -89,7 +89,11 @@ class AIEnginePipeline:
             top_5_ids = [cid for cid, score in sorted_cands[:5]]
             
         # Step 4 (Gelecek Özellik): Virtual Try-On
-        try_on_report = self.try_on_manager.run_comparison(image_path, top_5_ids)
+        try:
+            try_on_report = self.try_on_manager.run_comparison(image_path, top_5_ids)
+        except NotImplementedError:
+            print("\n[Warning] Virtual Try-On not implemented yet. Skipping.")
+            try_on_report = None
         
         print("\n=== PIPELINE COMPLETED ===")
         print(f"Top 5 Recommendations: {top_5_ids}")
