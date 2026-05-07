@@ -1,0 +1,505 @@
+hs_id,face_analysis,hair_analysis,score,definition
+HS01,ovale,straight,2,Doğal bir akış sağlar ancak düz saç yapısında hacmi korumak için ekstra bakım isteyebilir.
+HS02,ovale,straight,3,Oval yüzün dengeli yapısını dikey bir hacimle destekleyerek daha enerjik bir görünüm sunar.
+HS03,ovale,straight,1,Yüz hatlarını tamamen açıkta bırakır; eğer kusursuz kafa yapısına güvenmiyorsan riskli olabilir.
+HS04,ovale,straight,1,Statik bir modeldir; oval yüzün sahip olduğu doğal dinamizmi tam olarak yansıtmayabilir.
+HS05,ovale,straight,3,Her zaman şık ve garantici bir seçim. Düz saçın nizamını profesyonel bir duruşla birleştirir.
+HS06,ovale,straight,2,Ne çok iddialı ne de silik; dengeli bir geçiş arayanlar için güvenli liman.
+HS07,ovale,straight,4,"Yanlardaki keskin geçiş ve üstteki düz kütle, ideal yüz şeklinle mükemmel bir kontrast yaratır."
+HS08,ovale,straight,2,Pratik ve erkeksi bir modeldir ancak oval yüzde biraz sıradan bir etki bırakabilir.
+HS09,ovale,straight,0,"Bu model yoğun bukle gerektirir, düz saç yapısıyla uygulanması teknik olarak mümkün değildir."
+HS10,ovale,straight,0,Saç yapın düz olduğu için bu kıvırcık dokuyu yakalaman imkansızdır.
+HS11,ovale,straight,0,Düz saçta bu hacimli bukleler oluşmayacağı için önerilmez.
+HS12,ovale,straight,2,90’ların ikonik tarzı; ancak düz saçta ayrım çizgisinin sönük kalmaması için hacim desteği şart.
+HS13,ovale,straight,3,Bakışları tepe noktasına toplar ve yüzünün simetrik güzelliğini modern bir tavırla vurgular.
+HS14,ovale,straight,3,"Alın hattındaki küt bitiş, düz saçın sertliğini modern ve tarz sahibi bir dengeye oturtur."
+HS15,ovale,straight,2,Alnı kapatmak isteyenler için iyi bir seçenek ama düz saçta sönükleşip gözlerini kapatabilir.
+HS16,ovale,straight,1,Estetikten ziyade disiplin odaklı bir askeri kesimdir; yüz hatlarını sertleştirebilir.
+HS17,ovale,straight,3,Hem sportif hem klasik; oval yüzün temiz hatlarını ön plana çıkaran elit bir tercihtir.
+HS18,ovale,straight,1,"Saçın ağırlığı düz yapıda hacmi söndürebilir, bu da yüzünü olduğundan yorgun gösterebilir."
+HS19,ovale,straight,1,"Karakteristik etkisi oldukça düşük, fazla geleneksel ve sıradan bir bitiş sağlar."
+HS20,ovale,straight,1,Oval yüzün ideal oranlarını dikeyde fazla esneterek yüzü gereğinden uzun gösterebilir.
+HS21,ovale,straight,2,Dağınık stil düz saçta bazen tarzdan ziyade bakımsız bir görüntüye yol açabilir.
+HS22,ovale,straight,2,Modern bir geçiş sunar ancak yüzünde özel bir karakter yaratma potansiyeli sınırlıdır.
+HS23,ovale,straight,1,"Oval yüzün estetik avantajlarını kullanamayan, oldukça kaba ve düz bir kesimdir."
+HS24,ovale,straight,2,Dikkat çekici ve aykırı; oval yüzün kusursuzluğu bu zor stili taşımaya yardımcı olur.
+HS25,ovale,straight,4,Klasik karizmanın zirvesi. Düz saçı yüksek hacimle arkaya taramak oval yüzüne güç katar.
+HS26,ovale,straight,4,"Düz saçın pürüzsüz yapısını hacimli bir ön tepeyle birleştiren, yüzüne en çok yakışacak modellerden biri."
+HS27,ovale,straight,1,Çok katı ve resmi bir görünüm; modern stil dünyasının biraz uzağında kalır.
+HS28,ovale,straight,2,"Temiz ve derli toplu bir duruş sergiler ancak görsel bir ""wow"" etkisi yaratmaktan uzaktır."
+HS29,ovale,straight,1,"Düz saçlar kontrolsüzce dikilebilir, bu da oval yüzün zarafetini gölgeleyen bir görüntü yaratır."
+HS30,ovale,straight,1,"Düz saç yapısında omuz hizası sönük kalmaya meyillidir, yüzün enerjisini aşağı çekebilir."
+HS31,ovale,straight,1,Yanların tamamen açılması yüzünü olduğundan daha ince ve sıska gösterebilir.
+HS32,ovale,straight,3,Yüzünü tamamen odak noktası yapar; kemik yapına ve oval hatlarına güveniyorsan mükemmeldir.
+HS33,ovale,straight,0,"Bu modelin özü olan doğal dalgalar, düz saç dokusunda kendiliğinden oluşmaz."
+HS34,ovale,straight,2,"Modern bir tarz ama düz saçta o ""hareketli"" dokuyu korumak için yoğun ürün kullanımı gerektirir."
+HS35,ovale,straight,4,Hem modern hem hacimli. Düz saçı sıradanlıktan kurtarıp yüzüne ideal bir odak noktası sağlar.
+HS36,ovale,straight,1,"Geometrik olarak yüz dengeni bozabilir, genellikle oval hatlarla çok uyumlu birleşmez."
+HS37,ovale,straight,4,"Yan ve tepe arasındaki keskin ayrım, oval yüzündeki kemik yapısını netleştirir ve maskülenliği artırır."
+HS38,ovale,straight,2,Üstteki yoğunluk bazen oval yüzün dengeli oranlarını fazla kapatabilir.
+HS39,ovale,straight,0,Saçında doğal dalga olmadığı için bu modelin katlı ve hacimli duruşu yakalanamaz.
+HS40,ovale,straight,0,Düz saçta dalgalı bir ayrım formu oluşmayacağı için teknik olarak uyumsuzdur.
+HS41,ovale,straight,0,"Modelin temelini oluşturan dalgalı doku, düz saç yapısına terstir."
+HS42,ovale,straight,0,Katlı ve dalgalı karakteristik yapısı düz saçta sönük bir fiyaskoya dönüşebilir.
+HS01,ovale,wavy/curly,4,Dalgaların arkaya akışı oval yüzün dengeli hatlarıyla mükemmel bir doğal uyum sağlar.
+HS02,ovale,wavy/curly,3,Tepe hacmi yüzü modernize eder; dalgalı dokuyla uygulanması dinamik ama bakım ister.
+HS03,ovale,wavy/curly,2,Oval yüz formu kaldırır ancak dalgalı dokunun estetik avantajını tamamen yok eder.
+HS04,ovale,wavy/curly,2,"Kıvırcık doku, bu modelin imza yatay alın hattını bozar; teknik olarak zayıf kalır."
+HS05,ovale,wavy/curly,3,Dalgalı saçta nizamlı bir ayrım zordur; oval yüze klasik ve olgun bir hava katar.
+HS06,ovale,wavy/curly,3,Yanların hafif açılması tepedeki dalgaları temiz ve profesyonel bir çerçeveye alır.
+HS07,ovale,wavy/curly,4,"Keskin yan geçişler ve üstteki dalgalı kütle, oval yüzü daha atletik ve modern gösterir."
+HS08,ovale,wavy/curly,2,Dalgalı dokuyu göstermek için çok kısadır; oval yüzde fazla sıradan durur.
+HS09,ovale,wavy/curly,4,"Kulak arkasındaki kavisli fade, buklelerin hacmini oval yüzle en iyi buluşturan modeldir."
+HS10,ovale,wavy/curly,4,"Alna düşen dalgalar yüzü harika çerçevelerken, fade geçişi yüzün ideal formunu korur."
+HS11,ovale,wavy/curly,4,Oval yüzün simetrisi bu yoğun hacmi mükemmel taşır; sanatsal ve özgür bir stildir.
+HS12,ovale,wavy/curly,3,İki yana düşen dalgalar yüzü yumuşatır; oval yüz için güvenli ve romantik bir seçimdir.
+HS13,ovale,wavy/curly,2,"Dalgalı doku, bu modelin ihtiyacı olan o agresif ve sivri dikliği tam veremez."
+HS14,ovale,wavy/curly,2,Alındaki yoğunluk oval yüzün dengesini bozup yüzü olduğundan kısa gösterebilir.
+HS15,ovale,wavy/curly,3,"Dağınık dalgalı kahkül, oval yüze derinlik katar ancak yanlar mutlaka kısa tutulmalıdır."
+HS16,ovale,wavy/curly,1,Dalgalı dokuyu öldüren ve yüzü çok çıplak bırakan uyumsuz bir askeri tarzdır.
+HS17,ovale,wavy/curly,3,Dalgalı saçın en nizamlı hali; oval yüzde çok elit ve prestijli bir duruş sergiler.
+HS18,ovale,wavy/curly,2,Dalgalı saçı geriye yatırmak kontrolsüz bir kabarıklık yaratarak simetriyi bozabilir.
+HS19,ovale,wavy/curly,2,Standart bir kısa model; ne yüzü ne de saç dokusunu ön plana çıkarır.
+HS20,ovale,wavy/curly,2,Saçı toplamak yüzü fazla izole eder; dalgalı saçın yumuşatma etkisini devre dışı bırakır.
+HS21,ovale,wavy/curly,4,"""Uyan ve çık"" tarzı. Dalgalı hacim oval yüzün simetrisiyle zahmetsiz bir karizma yakalar."
+HS22,ovale,wavy/curly,2,Modern bir deneme olsa da dalgalı saçın estetiğini tam yansıtmaz.
+HS23,ovale,wavy/curly,0,"Oval yüzün zarif hatlarına ve dalgalı saçın yapısına tamamen zıt, teknik dışı bir stil."
+HS24,ovale,wavy/curly,2,Oval yüz taşır ancak dalgalı dokuyla birleşince çok karmaşık bir görüntü yaratabilir.
+HS25,ovale,wavy/curly,3,Dalgalı saçın doğal yüksekliği oval yüzde çok havalı durur ama her gün form vermek gerekir.
+HS26,ovale,wavy/curly,4,Oval yüzün altın standartıdır; ön saçların dalgalı hacmi yüzü mükemmel dengeler.
+HS27,ovale,wavy/curly,1,"Saçın doğal hareketini hapseden, oval yüzü donuklaştıran çok katı bir modeldir."
+HS28,ovale,wavy/curly,2,Kısa dalgalar yan ayrımda sönük kalır; görsel etkisi zayıftır.
+HS29,ovale,wavy/curly,1,Dalgalı saçta o sivri uçları yakalamak fiziksel olarak zordur; karmaşa yaratır.
+HS30,ovale,wavy/curly,3,Omuz hizasındaki dalgalar yüzü harika çerçeveler; oval yüz için karakteristik bir uzun modeldir.
+HS31,ovale,wavy/curly,1,Yanların sıfırlanması oval yüzü gereksiz daraltıp kafa yapısını sivriltir.
+HS32,ovale,wavy/curly,2,Islak görünüm dalgalı yapıyla çatışır; doğal hacmi öldürdüğü için önerilmez.
+HS33,ovale,wavy/curly,4,Dalgalı saçın en saf hali. Oval yüzün atletik yapısını en doğal şekilde sergiler.
+HS34,ovale,wavy/curly,2,Dalgalı dokuda ekstradan tekstür kesimi yapmak saçın formunu bozabilir.
+HS35,ovale,wavy/curly,4,"Hareketli, dikey hacimli ve modern. Oval yüzü en iyi modernize eden zirve seçimdir."
+HS36,ovale,wavy/curly,1,Yüz simetrisini dikeyde sivriltip bozan riskli ve teknik dışı bir toplama.
+HS37,ovale,wavy/curly,3,"Yan-üst kontrastı, tepedeki dalgaların hareketini belirginleştiren modern bir tercihtir."
+HS38,ovale,wavy/curly,3,"Yana sarkan uzun dalgalar, oval yüzün yumuşak hatlarıyla sanatsal bir denge kurar."
+HS39,ovale,wavy/curly,4,"Katlı yapısıyla yüzü çevreleyen dalgalar, oval yüzün en karizmatik ve modern yorumudur."
+HS40,ovale,wavy/curly,3,Klasik yan ayrımın dalgalı ve yumuşak formu; yüze elit ve entelektüel bir ifade katar.
+HS41,ovale,wavy/curly,4,Hem modern hem temiz; yan fade geçişi üstteki dalgaları mükemmel vurgular.
+HS42,ovale,wavy/curly,4,Asimetrik katlar; oval yüzün kusursuzluğunu asi bir tavırla birleştiren zirve modeldir.
+HS01,ovale,buzz,0,Teknik uyumsuzluk; Buzz saç uzunluğunda bu akışın sağlanması mümkün değildir.
+HS02,ovale,buzz,1,Buzz saç seviyesinde saçlar yukarı taranacak uzunlukta olmadığı için form oluşmaz.
+HS03,ovale,buzz,4,Klasiğin gücü. Oval yüzün kusursuz simetrisini en net ve cesur şekilde sergileyen zamansız model.
+HS04,ovale,buzz,3,"Alındaki çok kısa küt hat, Buzz kesime antik bir dokunuş ve karakter katar."
+HS05,ovale,buzz,0,Teknik uyumsuzluk; Buzz kısalığındaki saçta ayrım hattı oluşturulamaz.
+HS06,ovale,buzz,1,"Buzz kesim için yanlar fazla uzun kalır, modelin netliğini bozar."
+HS07,ovale,buzz,1,Buzz saç yapısında üst kütle yana yatırılamayacak kadar kısadır.
+HS08,ovale,buzz,4,Buzz kesimin bir tık daha uzun versiyonu; oval yüzde maskülenliği nizamla birleştirir.
+HS09,ovale,buzz,0,Buzz saç seviyesinde bukleler henüz oluşmadığı için uygulanamaz.
+HS10,ovale,buzz,0,Teknik uyumsuzluk; kıvırcık kahkül yapısı Buzz uzunluğuna terstir.
+HS11,ovale,buzz,0,Yapısal olarak imkansız; Buzz saç bu uzunluğun tam zıttıdır.
+HS12,ovale,buzz,0,"Buzz saç yapısında ortadan ayrılan bir ""perde"" efekti verilemez."
+HS13,ovale,buzz,2,"Çok kısa saçta tepeyi sivriltmek zordur, etkisi Buzz kesimde sönük kalabilir."
+HS14,ovale,buzz,3,"Tepe dokusunun hafifçe öne yönlendirilmesi, Buzz stile modern bir derinlik katar."
+HS15,ovale,buzz,0,Teknik uyumsuzluk; alna düşen bir kahkül yapısı bu kısalıkta mümkün değildir.
+HS16,ovale,buzz,4,"Yanların aşırı kısa, tepenin dar bir hatla bırakılması; oval yüzü çok daha atletik gösterir."
+HS17,ovale,buzz,2,Buzz stile göre üstler biraz daha nizam ister; oval yüzde temiz ama çok sade durur.
+HS18,ovale,buzz,0,Saçlar geriye taranacak uzunlukta olmadığı için teknik olarak imkansızdır.
+HS19,ovale,buzz,3,"Kulak çevresindeki hafif geçiş, Buzz kesimin sertliğini yumuşatır ve estetik katar."
+HS20,ovale,buzz,0,Teknik uyumsuzluk; Buzz saç toplanamayacak kadar kısadır.
+HS21,ovale,buzz,0,"Buzz saçta ""dağınık orta boy"" yapısı oluşturulamaz."
+HS22,ovale,buzz,4,"Modern Buzz tarzının zirvesi. Yanlardaki orta seviye geçiş, kafa yapını dengeler."
+HS23,ovale,buzz,4,"Disiplinli ve net. Oval yüzün her açısını vurgulayan, bakımı en kolay favori model."
+HS24,ovale,buzz,0,Teknik uyumsuzluk; Buzz kesim ensede bu uzunluğu barındırmaz.
+HS25,ovale,buzz,0,Buzz saçta o meşhur tepe hacmini (pomp) oluşturmak imkansızdır.
+HS26,ovale,buzz,1,"Buzz saç uzunluğu, ön tarafta o ikonik yükselişi sağlamaya yetmez."
+HS27,ovale,buzz,3,Çok kısa ve nizamlı; profesyonel dünyada ciddiyetini koruyan bir Buzz varyasyonu.
+HS28,ovale,buzz,1,Buzz kısalığında saçın yana ayrılması doğal durmaz ve yapılamaz.
+HS29,ovale,buzz,2,"Saçlar çok kısa olduğunda ""dikenli"" doku ancak sert ürünlerle ve zorlama durur."
+HS30,ovale,buzz,0,Teknik uyumsuzluk; Buzz saç omuz hizasına ulaşamaz.
+HS31,ovale,buzz,4,Yanların tamamen sıfırlanması tepeyi vurgular; oval yüzde ultra modern bir etki yaratır.
+HS32,ovale,buzz,0,Buzz saç yapısı pürüzsüzce arkaya yatırılamaz.
+HS33,ovale,buzz,0,Kısa Buzz saçta dalga formu oluşması teknik olarak mümkün değildir.
+HS34,ovale,buzz,3,Buzz kesime hafif bir makas dokusu ekleyerek sıradanlıktan kurtulmak isteyenler için ideal.
+HS35,ovale,buzz,1,Buzz saçta bu hacimli dokuyu oluşturacak uzunluk yoktur.
+HS36,ovale,buzz,0,Teknik uyumsuzluk; Buzz saçın tepe düğümü oluşturması imkansızdır.
+HS37,ovale,buzz,3,"Keskin yan-üst ayrımı, çok kısa saçta bile oval yüzün kemik hattını güçlendirir."
+HS38,ovale,buzz,0,"Buzz stile göre tepedeki saçların ""uzun"" olması gerektiği için uyumsuzdur."
+HS39,ovale,buzz,0,Buzz saçta dalgalı ve katlı bir yapı kurulamaz.
+HS40,ovale,buzz,0,Teknik uyumsuzluk; ne dalga ne de ayrım hattı bu kısalıkta mümkündür.
+HS41,ovale,buzz,2,"Eğer Buzz saçın bir tık uzamış halindeyse, hafif bir doku kazandırılabilir ama zordur."
+HS42,ovale,buzz,0,Buzz saçta Wolf Cut karakteristik katlarını oluşturmak imkansızdır.
+HS01,square,straight,3,"Düz saçın akışkanlığı, kare yüzün sert hatlarını yumuşatmak için harika bir dengeleyici unsurdur."
+HS02,square,straight,4,"Tepe bölgesindeki dikey hacim, yüzü yukarı çekerek keskin çene hattını mükemmel bir oranla dengeler."
+HS03,square,straight,2,Güçlü bir yüzünüz varsa bu kesim sizi oldukça maskülen gösterir ancak köşeli hatları daha çok vurgular.
+HS04,square,straight,1,"Alındaki düz ve kısa hat, kare yüzü daha basık ve geniş gösterebileceği için pek önerilmez."
+HS05,square,straight,3,Klasik ve nizamlı duruşuyla kare yüzün otoriter yapısına profesyonel bir zarafet katar.
+HS06,square,straight,2,"Geleneksel bir kesimdir; yüz hatlarınızı nötr tutar, ne çok yumuşatır ne de çok keskinleştirir."
+HS07,square,straight,4,"Yanlardaki geçiş ve üstteki hacimli ayrım, kare yüzün en iyi taşıdığı modern klasiklerden biridir."
+HS08,square,straight,2,Pratik bir modeldir ancak düz saçta kare yüzün köşelerini dengelemek adına biraz sönük kalabilir.
+HS09,square,straight,0,Teknik uyumsuzluk; düz saç dokusu bu bukleli yapıyı desteklemez.
+HS10,square,straight,0,Saç yapınız düz olduğu için bu kıvırcık ön dokuyu elde etmeniz mümkün değildir.
+HS11,square,straight,0,Düz saç dokusuyla bu modelin hacimli ve dalgalı formuna ulaşılamaz.
+HS12,square,straight,3,Ortadan ayrılan düz saçlar yüzün yanlarını perdeleyerek geniş çene hattını bir miktar daraltır.
+HS13,square,straight,4,"Tepeye doğru sivrilen form, bakışları yukarı çekerek yüzün kare formunu estetik bir şekilde uzatır."
+HS14,square,straight,2,Alındaki küt bitiş bazen yüzü fazla geniş hissettirebilir; daha çok uzun yüzler için idealdir.
+HS15,square,straight,2,Alnı kapatır ancak düz saçta yeterli hacim olmazsa yüzü olduğundan daha basık gösterebilir.
+HS16,square,straight,1,"Yanların aşırı kısalığı, kare yüzün köşeli yapısını çok sert bir şekilde ön plana çıkarır."
+HS17,square,straight,3,"Hem derli toplu hem de yüz hatlarını nizamla çerçeveleyen, kare yüz için çok elit bir seçimdir."
+HS18,square,straight,2,Uzun ve geriye taranmış düz saçlar yüzü tamamen açar; güçlü çene hattına güvenenler için iyidir.
+HS19,square,straight,2,Standart bir kısa kesim; kare yüz için ne büyük bir avantaj ne de dezavantaj sağlar.
+HS20,square,straight,1,Saçı tepede sıkıca toplamak yüzün köşeli yapısını çok sert ve izole bir şekilde gösterir.
+HS21,square,straight,4,Dağınık katlar düz saçın tekdüzeliğini kırarak kare yüzün sertliğini en iyi kıran modellerden biridir.
+HS22,square,straight,2,Modern bir geçiş sunar ancak yüz oranlarını değiştirmekte etkisiz kalabilir.
+HS23,square,straight,1,"Kare yüzü olduğundan daha agresif ve sert gösterebilen, oldukça kısa bir kesimdir."
+HS24,square,straight,2,Ensede bırakılan uzunluk yüzün genel köşeli formunu bir miktar arka plana itebilir.
+HS25,square,straight,4,"Kare yüz için altın standarttır. Üstteki yüksek hacim, çene hattının gücünü estetikle buluşturur."
+HS26,square,straight,4,Düz saçı hacimle ön plana çıkararak kare yüzün maskülen yapısını karizmatik bir şekilde dengeler.
+HS27,square,straight,1,"Çok katı ve simetrik yapısı, kare yüzün halihazırdaki sert hatlarını fazla vurgular."
+HS28,square,straight,3,"Kısa ve yana taranmış stil, keskin yüz hatlarına sahip erkeklerde çok disiplinli durur."
+HS29,square,straight,3,Yukarı yönlü doku dikey bir illüzyon yaratarak yüzün kare formunu dengeler.
+HS30,square,straight,3,"Omuz hizasındaki düz kütle, çene hattının sertliğini kapatarak daha yumuşak bir ifade sağlar."
+HS31,square,straight,1,Yanların sıfırlanması kafa yapısını köşeli bir kutu gibi göstererek estetiği bozabilir.
+HS32,square,straight,2,"Yüzü tamamen çıplak bırakan bu model, güçlü bir özgüven ve çok net hatlar ister."
+HS33,square,straight,0,Teknik uyumsuzluk; düz saçta kendiliğinden o dağınık dalgalar oluşmaz.
+HS34,square,straight,2,Düz saçta doku yaratmak zordur; modelin yatay hatları kare yüzü daha geniş gösterebilir.
+HS35,square,straight,4,Modern ve hacimli. Dikey hareket sayesinde kare yüzün hatlarını mükemmel bir şekilde modernize eder.
+HS36,square,straight,1,Yüz dengesini dikeyde çok bozabilir ve köşeli hatları gereksiz derecede keskinleştirir.
+HS37,square,straight,3,"Üst kütle ile yanlar arasındaki geçiş, yüzün karakterini ve maskülenliğini ön plana taşır."
+HS38,square,straight,3,"Yanlara doğru sarkan düz saç kütlesi, yüzün köşeli üst kısımlarını yumuşatmak için idealdir."
+HS39,square,straight,0,Düz saç dokusu bu modelin katlı ve hacimli dalga formunu karşılamaz.
+HS40,square,straight,0,Saçınızda dalga olmadığı için bu formun o yumuşak geçişi elde edilemez.
+HS41,square,straight,0,Teknik olarak uyumsuz; düz saçta bu dalgalı doku yakalanamaz.
+HS42,square,straight,0,Modelin karakterini oluşturan katlı dalga yapısı düz saçta sönük kalacaktır.
+HS01,square,wavy/curly,4,"Dalgalı saçın doğal hareketi, kare yüzün sert hatlarını yumuşatarak zahmetsiz bir karizma sağlar."
+HS02,square,wavy/curly,2,"Dalgaların yukarı yönlü hacmi güzeldir ancak form kare yüzde bazen fazla ""kutu"" gibi durabilir."
+HS03,square,wavy/curly,1,Güçlü çene hattını iyice sertleştirir; dalgalı saçın yumuşatma potansiyelini tamamen yok eder.
+HS04,square,wavy/curly,2,Kıvırcık dokuyla birleştiğinde alın hattı belirsizleşir; model netliğini kaybedebilir.
+HS05,square,wavy/curly,2,Dalgalı saçta bu keskin ayrımı korumak güçtür; nizam yerini karmaşaya bırakabilir.
+HS06,square,wavy/curly,3,"Yanların hafifçe açılması ve tepedeki dalgalar, kare yüz için temiz ve dengeli bir bitiş sağlar."
+HS07,square,wavy/curly,2,Standart bir model; dalgalı saçta karakterini korumak zordur.
+HS08,square,wavy/curly,2,Pratik bir kesimdir ancak saçın dalgalı dokusunun güzelliğini yeterince göstermez.
+HS09,square,wavy/curly,4,"Yanlardaki kavisli geçiş, kıvırcık tepe hacmiyle birleşerek kare yüzü daha oval bir forma yaklaştırır."
+HS10,square,wavy/curly,4,"Alna düşen dalgalar yüzün sert üst köşelerini kapatırken, yanlar yüzün gücünü korur."
+HS11,square,wavy/curly,4,"Yüzü çevreleyen bukleler, kare yüzün en iyi dengeleyicisidir; hatları mükemmel bir estetikle yumuşatır."
+HS12,square,wavy/curly,2,İki yana ayrılan dalgalar düz saçtaki kadar etkili bir perdeleme yapmayabilir.
+HS13,square,wavy/curly,2,"Dalgalı saçın yumuşak dokusu, bu modelin istediği agresif ve sivri tepe formunu vermekte zorlanır."
+HS14,square,wavy/curly,1,Dalgalı saçta küt kahkül hattı bazen fazla kabarık durarak yüzü olduğundan geniş gösterebilir.
+HS15,square,wavy/curly,3,"Dağınık ve dalgalı kahkül yapısı, yüzün maskülen hatlarına gizemli ve yumuşak bir derinlik katar."
+HS16,square,wavy/curly,1,Dalgalı dokuyu tamamen yok eder ve kare yüzün köşeli yapısını aşırı vurgulayan sert bir duruş sergiler.
+HS17,square,wavy/curly,2,"Dalgalı saç yapısı bu modelin ""derli toplu"" duruşunu her zaman korumaya yetmeyebilir."
+HS18,square,wavy/curly,2,"Dalgalı saçı geriye yatırmak kontrolü zor bir hacim yaratır, yüzü çok geniş gösterebilir."
+HS19,square,wavy/curly,2,"Güvenli bir tercih olsa da, dalgalı saçın ve kare yüzün karakterini tam yansıtamaz."
+HS20,square,wavy/curly,2,"Kare yüzde saçı toplamak yüzü çok izole eder, yumuşatma etkisini kaybeder."
+HS21,square,wavy/curly,4,"Dalgalı saçın doğal karmaşası, kare yüzün keskinliğini kıran en etkili ve modern tarzlardan biridir."
+HS22,square,wavy/curly,2,Standart bir kısa model; ne yüzü çok yumuşatır ne de karakteristik bir fark yaratır.
+HS23,square,wavy/curly,0,"Kare yüzü çok sertleştiren, dalgalı dokuyla teknik olarak uyumsuz bir kesimdir."
+HS24,square,wavy/curly,3,"Arka kısımdaki uzunluk, kare yüzün köşeli formunu dikeyde esneterek dikkati dağıtır."
+HS25,square,wavy/curly,3,Dalgalı saçla yapılan Pompadour çok hacimli durur; karizmatik ama bakım ister.
+HS26,square,wavy/curly,4,"Ön taraftaki doğal dalga hacmi, kare yüzün güçlü karakterine en çok yakışan modellerden biridir."
+HS27,square,wavy/curly,1,"Kare yüzü çok donuk gösterebilen, fazla katı bir ordu stili."
+HS28,square,wavy/curly,2,"Kısa dalgalar için nizamlı bir seçenek olsa da, görsel etkisi kare yüzde sönük kalabilir."
+HS29,square,wavy/curly,1,Dalgalı saçlar dikilmeye çalışıldığında genellikle istenen o keskinliği vermez.
+HS30,square,wavy/curly,4,Kare yüzün en büyük dostu. Omuz hizasındaki dalgalar çene hattını bir sanat eseri gibi çerçeveler.
+HS31,square,wavy/curly,1,"Yanların tamamen sıfırlanması, kare yüzün üst kısımlarını olduğundan daha köşeli hissettirebilir."
+HS32,square,wavy/curly,2,"Kare yüzü fazla agresif yapabilen, kontrolü zor bir geriye tarama."
+HS33,square,wavy/curly,4,"Özgür, hacimli ve salaş. Kare yüzün maskülenliğini en doğal ve çekici şekilde sergileyen stildir."
+HS34,square,wavy/curly,2,"Dalgalı saçta doku zaten mevcuttur, bu kesim bazen o dokuyu gereksiz yere daraltabilir."
+HS35,square,wavy/curly,4,"Modern, hareketli ve dikey hacimli. Kare yüzün hatlarını yumuşatırken modern bir duruş sağlar."
+HS36,square,wavy/curly,1,"Yüz dengesini dikeyde bozan, kare yüz için uyumsuz bir toplama şekli."
+HS37,square,wavy/curly,3,"Yanlardaki sert ayrım, üstteki dalgalı karmaşanın karizmasını kare yüzde belirginleştirir."
+HS38,square,wavy/curly,3,"Yana sarkan dalgalı kütle, yüzün üst kısmındaki köşeli yapıyı estetik bir şekilde kamufle eder."
+HS39,square,wavy/curly,4,Katmanlı ve dalgalı yapısı sayesinde kare yüzü yumuşatan en başarılı uzun modellerden biridir.
+HS40,square,wavy/curly,3,Klasik ayrımın modern yorumu; kare yüze daha yumuşak ve elit bir ifade katar.
+HS41,square,wavy/curly,3,"Belirgin bukleler ve yan geçişiyle kare yüzle uyumlu, modern bir kısa kesim alternatifi."
+HS42,square,wavy/curly,4,Asimetrik katlar ve doğal dalgalar; kare yüzün gücünü asilikle birleştiren zirve bir modeldir.
+HS01,square,buzz,0,Teknik uyumsuzluk; Buzz kısalığında bu akışkan formu yakalamak mümkün değildir.
+HS02,square,buzz,1,"Buzz seviyesindeki saç, yukarı taranacak uzunluğa sahip olmadığı için bu form oluşmaz."
+HS03,square,buzz,4,Kare yüzün güçlü karakterini en saf haliyle yansıtır; kemik yapına güveniyorsan en etkileyici stildir.
+HS04,square,buzz,3,"Alındaki çok kısa küt hat, kare yüzün otoriter duruşunu antik ve modern bir dokunuşla birleştirir."
+HS05,square,buzz,0,Teknik uyumsuzluk; bu kısalıktaki saçta belirgin bir ayrım hattı oluşturulamaz.
+HS06,square,buzz,1,Yanların bir tık uzun kalması kare yüzü olduğundan daha geniş ve hantal gösterebilir.
+HS07,square,buzz,1,"Üst kütle, Buzz kategorisinde yana yatırılabilecek kadar uzun değildir."
+HS08,square,buzz,4,"Tepede bırakılan hafif uzunluk, kare yüzün üst köşelerini dikeyde dengeleyerek daha estetik bir form sunar."
+HS09,square,buzz,0,"Buzz kısalığında bukleler oluşmaz, bu nedenle dalgalı/kıvırcık doku etkisi yaratılamaz."
+HS10,square,buzz,0,Yapısal olarak imkansız; Buzz kesim alna düşen bir kahkül yapısı barındırmaz.
+HS11,square,buzz,0,Buzz saçın doğasına aykırı; uzunluk ve doku bu modelle tamamen zıttır.
+HS12,square,buzz,0,Teknik uyumsuzluk; bu kısalıkta ortadan ayrılan bir çerçeveleme yapılamaz.
+HS13,square,buzz,3,Saçlar çok kısa olsa da hafif bir tepe sivriltmesi kare yüzü dikeyde uzatarak dengeler.
+HS14,square,buzz,3,"Tepe dokusunun öne yönlendirilmesi, Buzz stile modern bir derinlik ve tarz katar."
+HS15,square,buzz,0,Teknik uyumsuzluk; alna sarkan bir doku bu kesim tarzında mevcut değildir.
+HS16,square,buzz,4,Kare yüz için idealdir; yanların aşırı kısalığı yüzün o güçlü çene hattını iyice sivriltir.
+HS17,square,buzz,2,Buzz stilden biraz daha nizamlıdır; kare yüzde temiz durur ama görsel etkisi düşüktür.
+HS18,square,buzz,0,Saçlar geriye taramaya izin vermeyecek kadar kısa olduğu için uygulanamaz.
+HS19,square,buzz,3,"Kulak çevresindeki hafif geçiş, kare yüzün sert köşelerini bir miktar yumuşatarak estetik sağlar."
+HS20,square,buzz,0,Teknik uyumsuzluk; Buzz saçın toplanamayacak kadar kısa olması modelle çelişir.
+HS21,square,buzz,0,Buzz saç yapısında bu dağınık ve orta boy katmanlı yapı kurulamaz.
+HS22,square,buzz,4,"Modern Buzz tarzının zirvesidir. Yan geçişler, kafa yapını kutu görünümünden kurtarıp dengeler."
+HS23,square,buzz,4,"Kare yüzün sertliğini disiplinle birleştiren, bakımı kolay ve son derece maskülen bir tercih."
+HS24,square,buzz,0,Teknik uyumsuzluk; Buzz kesim ensede bu derece bir uzunluk farkı barındırmaz.
+HS25,square,buzz,0,Buzz saçta o karakteristik yüksek tepe hacmini oluşturmak teknik olarak imkansızdır.
+HS26,square,buzz,1,Ön tarafta yükselme sağlayacak saç uzunluğu olmadığı için model karakteri oluşmaz.
+HS27,square,buzz,3,"Çok kısa ve nizamlı; kare yüzün otoriter yapısına uygun, profesyonel bir kısa kesim varyasyonu."
+HS28,square,buzz,1,Buzz kısalığında saçı yana ayırmak doğal bir ayrım çizgisi oluşturmayacağı için önerilmez.
+HS29,square,buzz,2,Çok kısa saçta dikenli doku yaratmak zordur; kare yüz için fazla dağınık görünebilir.
+HS30,square,buzz,0,Yapısal olarak imkansız; Buzz kesim omuz hizasına ulaşan bir uzunluk değildir.
+HS31,square,buzz,4,Yanların tamamen sıfırlanması tepedeki kareliği kırar ve kafa yapını daha dinamik gösterir.
+HS32,square,buzz,0,Buzz saç yapısı pürüzsüzce arkaya yatırılabilecek bir yüzeye sahip değildir.
+HS33,square,buzz,0,Kısa Buzz saçta dalga formu oluşması fiziksel olarak mümkün değildir.
+HS34,square,buzz,3,Buzz kesime makas dokusu ekleyerek sıradanlıktan kurtulmak ve yüze derinlik katmak isteyenlere.
+HS35,square,buzz,1,Buzz saçta bu hacimli ve dokulu yükselişi sağlayacak malzeme yoktur.
+HS36,square,buzz,0,Teknik uyumsuzluk; Buzz saçın tepe düğümü oluşturacak uzunluğu yoktur.
+HS37,square,buzz,3,"Yan ve üst arasındaki keskin kontrast, çok kısa saçta bile kare yüzün karakterini parlatır."
+HS38,square,buzz,0,"Buzz stile göre üstteki saçların uzun kalması gerekir, bu da temel kesimle uyumsuzdur."
+HS39,square,buzz,0,Buzz saçta dalgalı ve katlı bir uzunluk yapısı kurulması mümkün değildir.
+HS40,square,buzz,0,Teknik olarak imkansız; ne dalga ne de nizamlı ayrım Buzz saçta hayat bulur.
+HS41,square,buzz,2,Eğer Buzz saçın biraz uzamışsa hafif bir doku denenebilir ama kare yüz için fazla karmaşık kalabilir.
+HS42,square,buzz,0,Buzz kesim ile Wolf Cut'ın katlı ve dalgalı yapısı birbirine tamamen zıt tarzlardır.
+HS01,round,straight,2,Yüzün yanlarına hacim katma riski taşır; yuvarlak hatları daha geniş gösterebilir.
+HS02,round,straight,4,"Saçı yukarı yönlü dikmek, yüzünü dikeyde uzatarak yuvarlaklığı anında dengeler."
+HS03,round,straight,1,Yüzün tüm yuvarlaklığını olduğu gibi ortaya çıkarır; sakal desteği olmadan riskli bir tercihtir.
+HS04,round,straight,1,"Alındaki yatay hat, yüzü daha kısa ve geniş göstererek yuvarlaklığı vurgular."
+HS05,round,straight,3,"Keskin bir yan ayrım, yüze ihtiyacı olan köşeli illüzyonu kazandırmak için idealdir."
+HS06,round,straight,2,Fazla gelenekseldir; yuvarlak yüzü modernize etmek için yeterli dikey hacmi sağlamaz.
+HS07,round,straight,4,"Yanlardaki kısalık ve üstteki yana yatırılmış hacim, yuvarlak yüzü inceltmek için mükemmeldir."
+HS08,round,straight,2,Pratik bir kesimdir ancak yüzün genel dairesel formunu değiştirmekte zayıf kalır.
+HS09,round,straight,0,Teknik uyumsuzluk; düz saç dokusu bu kıvırcık formu karşılamaz.
+HS10,round,straight,0,Düz saç yapısında bu bukleli kahkül dokusu kendiliğinden oluşmaz.
+HS11,round,straight,0,Yapısal olarak imkansız; düz saçta bu yoğun dalga yapısı yakalanamaz.
+HS12,round,straight,1,"Ortadan ikiye ayrılan düz saç, yüzün yanak kısımlarını daha belirgin hale getirerek geniş gösterebilir."
+HS13,round,straight,4,"Tepeye doğru sivrilen yapı, yuvarlak bir yüzü en dinamik ve ince gösteren modellerden biridir."
+HS14,round,straight,2,Kahkül boyu çok kısa tutulmazsa yüzü basık gösterebilir; riskli bir dengedir.
+HS15,round,straight,1,"Alnı kapatmak dikey alanı daraltır, bu da yuvarlak yüzü daha dairesel bir forma sokar."
+HS16,round,straight,3,"Yanların aşırı kısalığı yüzü daraltır, ancak üst kütle çok dar kalırsa kafa yapını dengesiz gösterebilir."
+HS17,round,straight,3,Hem nizamlı hem de tepede hafif bir yükselti sunduğu için yüzü daha seçkin ve uzun gösterir.
+HS18,round,straight,2,Yüzü tamamen açar ancak düz saçta hacim sönük kalırsa yuvarlaklık çok vurgulanır.
+HS19,round,straight,2,Standart bir model; yüzün genişliğini almakta çok başarılı sayılmaz.
+HS20,round,straight,3,Saçı tepede sıkıca toplamak (yüksekte yapıldığında) yüzü dikeyde uzatan bir illüzyon yaratır.
+HS21,round,straight,2,Yandaki düz katlar yanaklara hacim ekleyerek yüzü daha geniş gösterebilir.
+HS22,round,straight,2,Modern bir geçiş sağlar ancak karakteristik olarak yüzü inceltme potansiyeli sınırlıdır.
+HS23,round,straight,1,Yüzü çok çıplak bırakır; yuvarlak hatları maskeleyebilecek hiçbir hacim sunmaz.
+HS24,round,straight,2,Aykırı bir tarz; ensedeki uzunluk yüzü dikeyde bir miktar uzatsa da yanlar riskli olabilir.
+HS25,round,straight,4,"Yuvarlak yüzün kurtarıcısıdır. Tepedeki görkemli hacim, yüzü çok daha karizmatik ve uzun gösterir."
+HS26,round,straight,4,Ön tarafta sağladığı dikey yükseliş ile yuvarlak yüzü anında modernize eden en iyi modellerden biridir.
+HS27,round,straight,2,Çok disiplinli ve düzdür; yuvarlak yüze ihtiyaç duyduğu yumuşak geçişi veya keskin kontrastı vermez.
+HS28,round,straight,3,Derli toplu ve hafif hacimli olması sayesinde yüzün dairesel etkisini kırar.
+HS29,round,straight,3,"Dikey dokular bakışları yukarı çeker, bu da yüzün genişliğini geri plana iter."
+HS30,round,straight,1,Düz saç yapısında yanlardaki kütle yuvarlak yüzü çok daha geniş ve basık gösterebilir.
+HS31,round,straight,3,Yanların sıfırlanması yüzü daraltır ancak tepedeki saç çok düzse dengeyi korumak zordur.
+HS32,round,straight,2,"Hacimli yapılmadığı sürece yuvarlak yüzü olduğu gibi sergileyen, sakal desteği isteyen bir modeldir."
+HS33,round,straight,0,Teknik uyumsuzluk; düz saç yapısı bu doğal dalga formuna uygun değildir.
+HS34,round,straight,2,Yatay dokular yuvarlak yüzü daha geniş algılatabilir; özenli bir kesim gerektirir.
+HS35,round,straight,4,Hem dikey hacim hem de hareketli doku ile yuvarlak yüzü en iyi kamufle eden modern stildir.
+HS36,round,straight,3,"Tepedeki yüksek toplama noktası yüzü dikeyde uzatır, ancak yanların çok kısa olması gerekir."
+HS37,round,straight,4,"Yanlardaki keskin ayrım ve üstteki kütle, yuvarlak yüze ihtiyacı olan köşeli karakteri kazandırır."
+HS38,round,straight,3,"Üstteki uzunluk yana dökülmediği, yukarı yönlendirildiği sürece yüzü harika dengeler."
+HS39,round,straight,0,Teknik uyumsuzluk; düz saçta katlı dalga yapısı oluşmaz.
+HS40,round,straight,0,Saçınız düz olduğu için bu yumuşak dalgalı geçişi elde etmeniz zordur.
+HS41,round,straight,0,Teknik uyumsuzluk; dalgalı doku düz saç yapısıyla hayat bulamaz.
+HS42,round,straight,0,Düz saçta bu asimetrik dalga yoğunluğunu yakalamak mümkün değildir.
+HS01,round,wavy/curly,3,Dalgaların arkaya doğru akışı karizmatik bir hava katar ancak yanların çok kabarmamasına dikkat edilmelidir.
+HS02,round,wavy/curly,3,"Dalgalı saçın dikey hacmi yüzü uzatmak için idealdir, ancak formu korumak düz saça göre daha zordur."
+HS03,round,wavy/curly,1,Yüzün tüm yuvarlaklığını ortaya çıkarır; dalgalı saçın hacim avantajını tamamen yok eder.
+HS04,round,wavy/curly,1,"Kıvırcık yapı alındaki çizgiyi bozar ve yüzü daha basık, dairesel gösterir."
+HS05,round,wavy/curly,2,"Dalgalı saçta net bir ayrım hattı oluşturmak zordur, model yuvarlak yüzde karmaşık durabilir."
+HS06,round,wavy/curly,3,"Yanların nizamlı kısalığı yüzü daraltırken, tepedeki dalgalar ihtiyacın olan yüksekliği sağlar."
+HS07,round,wavy/curly,4,"Yan fade geçişi yüzü inceltir, tepedeki dalgalı kütle ise dikey bir illüzyon yaratarak yüzü uzatır."
+HS08,round,wavy/curly,2,Pratik bir kesimdir ancak dalgalı saçın yuvarlak yüzü dengeleme potansiyelini tam kullanamaz.
+HS09,round,wavy/curly,4,"Ense ve kulak arkasındaki kavisli geçiş, kıvırcık tepe hacmiyle birleşerek yüzü daha oval ve modern gösterir."
+HS10,round,wavy/curly,4,"Alna düşen bukleler yuvarlak üst hattı kırar, yanlardaki fade ise yüzün genişliğini alır."
+HS11,round,wavy/curly,3,Yüzü çevreleyen bukleler hatları yumuşatır ancak yanlardaki aşırı hacim yüzü genişletebilir.
+HS12,round,wavy/curly,2,"Dalgalı saçta yanaklara düşen tutamlar, yuvarlak yüzün genişliğini daha çok vurgulayabilir."
+HS13,round,wavy/curly,3,Tepeye odaklanan dalgalı doku yüzü uzun gösterir ancak formun sivriliğini korumak zordur.
+HS14,round,wavy/curly,2,Kıvırcık doku alında fazla yoğunluk yaratarak yüzü daha kısa ve yuvarlak hissettirebilir.
+HS15,round,wavy/curly,3,"Alnı kapatan dağınık dalgalar odak noktasını gözlere çeker, ancak yanlar mutlaka kısa tutulmalıdır."
+HS16,round,wavy/curly,2,"Yanların aşırı kısalığı yüzü inceltir ama üstteki doku eksikliği yüzü bir ""top"" gibi gösterebilir."
+HS17,round,wavy/curly,3,Hafif dalgalı ve nizamlı duruşuyla yuvarlak yüzü daha seçkin ve dengeli bir forma sokar.
+HS18,round,wavy/curly,2,Dalgalı yapıda saçın hacmi kontrol edilemezse yüzü olduğundan daha iri gösterebilir.
+HS19,round,wavy/curly,2,Güvenli ama sıradan bir model; yuvarlak hatları inceltme konusunda çok iddialı değildir.
+HS20,round,wavy/curly,4,"Saçı tepede (yüksekte) toplamak, yuvarlak yüzü dikeyde uzatan en etkili yöntemlerden biridir."
+HS21,round,wavy/curly,3,Katlı dalgalar yüzü çerçeveler ancak yanak bölgelerindeki hacim kontrol altında tutulmalıdır.
+HS22,round,wavy/curly,2,Modern bir geçiş sunsa da dalgalı saçın karakterini yuvarlak yüzle tam buluşturamaz.
+HS23,round,wavy/curly,0,Yuvarlak yüzü çok çıplak bırakan ve dalgalı dokuyla teknik olarak uyumsuz bir kesimdir.
+HS24,round,wavy/curly,3,"Ensedeki uzunluk yüzü dikeyde uzatır, dalgalı doku ise bu aykırı tarzı daha yumuşak gösterir."
+HS25,round,wavy/curly,4,"Dalgalı saçın yarattığı doğal yüksek tepe hacmi, yuvarlak yüzü en karizmatik ve uzun gösteren stildir."
+HS26,round,wavy/curly,4,"Ön tarafta yükselen dalgalar, yuvarlak yüzün ihtiyacı olan o dikey illüzyonu mükemmel sağlar."
+HS27,round,wavy/curly,1,Dalgalı dokuyu baskılayan çok nizamlı bir ordu stili; yuvarlak yüzü donuklaştırır.
+HS28,round,wavy/curly,2,Kısa dalgalar için nizamlı bir seçenek olsa da görsel etkisi yuvarlak yüzde zayıf kalabilir.
+HS29,round,wavy/curly,2,Dalgalı saçta o sivri dokuyu yakalamak zordur; karmaşa yuvarlaklığı artırabilir.
+HS30,round,wavy/curly,2,Omuz hizasındaki dalgalar yanlarda hacim yaparak yuvarlak yüzü daha geniş gösterebilir.
+HS31,round,wavy/curly,3,"Yanların sıfırlanması yüzü daraltır, tepeye hafif bir doku kazandırarak modern duruş sağlar."
+HS32,round,wavy/curly,2,"Yüzü tamamen açan bu model, dalgalı saçın kabarma riskiyle yüzü daha iri gösterebilir."
+HS33,round,wavy/curly,3,Doğal ve hacimli dalgalar karakter katar ancak yüzün genişliğini kamufle etmekte zayıftır.
+HS34,round,wavy/curly,2,Yatay dokular yuvarlak yüzü daha geniş algılatabilir; dikkatli uygulanmalıdır.
+HS35,round,wavy/curly,4,Hem dikey hacim hem de dalgalı doku ile yuvarlak yüzü en iyi modernize eden stildir.
+HS36,round,wavy/curly,4,Tepedeki yüksek düğüm noktası yüzü ince ve uzun gösterir; yanlar kısa tutulduğunda kusursuzdur.
+HS37,round,wavy/curly,4,"Yan ve üst arasındaki sert kontrast, yuvarlak yüze ihtiyacı olan köşeli hatları kazandırır."
+HS38,round,wavy/curly,3,Üstteki uzun dalgaların yukarı yönlendirilmesi yüzü harika dengeler.
+HS39,round,wavy/curly,3,Katlı dalgalar yüzü çerçeveler ama genel hacmin yüzü basmamasına özen gösterilmelidir.
+HS40,round,wavy/curly,3,"Yan ayrımın dalgalı ve yumuşak formu, yuvarlak yüzün hatlarına daha elit bir hava katar."
+HS41,round,wavy/curly,4,"Belirgin bukleler ve fade geçişiyle, yuvarlak yüzü incelten en modern kısa kesimlerden biridir."
+HS42,round,wavy/curly,3,Asimetrik katlar karakter katar ancak yuvarlak yüzü fazla boğmamak için katlar dikkatli kesilmelidir.
+HS01,round,buzz,0,Teknik uyumsuzluk; Buzz kısalığında bu akışın sağlanması mümkün değildir.
+HS02,round,buzz,1,Saçlar yukarı taranacak uzunlukta olmadığı için yuvarlak yüzü uzatma etkisini gösteremez.
+HS03,round,buzz,2,Yüzün tüm daireselliğini ortaya çıkarır; ancak güçlü bir sakal hattıyla dengelenirse maskülen durur.
+HS04,round,buzz,3,"Alındaki kısa küt hat, yuvarlak yüze ihtiyacı olan o ""çizgisel"" kontrastı kazandırır."
+HS05,round,buzz,0,Teknik uyumsuzluk; Buzz kısalığında ayrım hattı oluşturulamaz.
+HS06,round,buzz,1,Yanların hafif uzun kalması yuvarlak yüzü olduğundan daha geniş ve dolgun gösterebilir.
+HS07,round,buzz,1,Üst kütle yana yatırılamayacak kadar kısadır; yuvarlak yüzü inceltme etkisi oluşmaz.
+HS08,round,buzz,3,"Tepedeki hafif uzunluk, kafa yapısını bir miktar dikeyde esneterek yuvarlaklığı dengeler."
+HS09,round,buzz,0,Buzz seviyesinde kıvırcık doku henüz oluşmadığı için teknik olarak uygulanamaz.
+HS10,round,buzz,0,Yapısal olarak imkansız; Buzz kesim alna düşen bir kahkül barındırmaz.
+HS11,round,buzz,0,Teknik uyumsuzluk; uzunluk ve form Buzz yapısına tamamen zıttır.
+HS12,round,buzz,0,Buzz saçta ortadan ayrılan bir çerçeveleme yapılması imkansızdır.
+HS13,round,buzz,3,"Çok kısa saçta bile tepeyi hafifçe sivriltmek, yuvarlak yüzü dikeyde daha ince gösterir."
+HS14,round,buzz,3,"Tepe dokusunun öne yönlendirilmesi, yuvarlak yüzün odağını yukarı ve öne çekerek denge sağlar."
+HS15,round,buzz,0,Teknik uyumsuzluk; alna sarkan bir yapı Buzz tarzında mevcut değildir.
+HS16,round,buzz,4,"Yuvarlak yüzün en iyi dostu; yanlar aşırı kısa, tepe dardır. Yüzü anında daraltır ve inceltir."
+HS17,round,buzz,2,Temiz bir kesimdir ancak yuvarlak hatları kırmak için fazla yumuşak ve nizamlı kalabilir.
+HS18,round,buzz,0,Teknik uyumsuzluk; saçlar geriye taranacak uzunlukta değildir.
+HS19,round,buzz,2,Geçiş çok aşağıda olduğu için yuvarlak yüzün genişliğini almakta yetersiz kalır.
+HS20,round,buzz,0,Teknik uyumsuzluk; Buzz saçın toplanamayacak kadar kısa olması modelle çelişir.
+HS21,round,buzz,0,Buzz saçta bu dağınık ve orta boy katmanlı yapı kurulamaz.
+HS22,round,buzz,4,"Modern geçişin tam ortası. Yanlardaki keskinlik, yuvarlak yüzü daha atletik bir forma sokar."
+HS23,round,buzz,3,Çok sert bir disiplin sağlar; yuvarlak yüzü olduğundan daha ciddi ve net gösterir.
+HS24,round,buzz,0,Teknik uyumsuzluk; Buzz kesim ensede bu uzunluk farkını barındırmaz.
+HS25,round,buzz,0,Buzz saçta o karakteristik yüksek tepe hacmini oluşturmak imkansızdır.
+HS26,round,buzz,1,Ön tarafta dikey yükselme sağlayacak saç uzunluğu olmadığı için model karakteri oluşmaz.
+HS27,round,buzz,2,Çok nizamlı ve düzdür; yuvarlak yüzün ihtiyacı olan keskin kontrastı tam veremez.
+HS28,round,buzz,1,"Buzz kısalığında doğal bir ayrım çizgisi oluşmaz, yuvarlak yüzde donuk durabilir."
+HS29,round,buzz,2,Çok kısa saçta dikenli doku karmaşa yaratarak yuvarlaklığı daha çok göze sokabilir.
+HS30,round,buzz,0,Yapısal olarak imkansız; omuz hizasına ulaşan bir uzunluk değildir.
+HS31,round,buzz,4,Yanların tamamen sıfırlanması yuvarlaklığı en aza indirir; tepedeki kısalıkla modern bir zıtlık yaratır.
+HS32,round,buzz,0,Buzz saç yapısı pürüzsüzce arkaya yatırılabilecek bir yüzeye sahip değildir.
+HS33,round,buzz,0,Kısa Buzz saçta dalga formu oluşması fiziksel olarak mümkün değildir.
+HS34,round,buzz,3,Buzz kesime hafif bir doku ekleyerek yüzün daireselliğini modern bir hareketle kırar.
+HS35,round,buzz,1,Buzz saçta bu hacimli yükselişi sağlayacak saç boyu yoktur.
+HS36,round,buzz,0,Teknik uyumsuzluk; Buzz saçın tepe düğümü oluşturacak uzunluğu yoktur.
+HS37,round,buzz,3,"Keskin yan-üst ayrımı, çok kısa saçta bile yuvarlak yüze köşeli bir ifade katar."
+HS38,round,buzz,0,Buzz stile göre üstteki saçların uzun kalması gerektiği için uyumsuzdur.
+HS39,round,buzz,0,Buzz saçta dalgalı ve katlı bir yapı kurulması mümkün değildir.
+HS40,round,buzz,0,Teknik olarak imkansız; ne dalga ne de nizamlı ayrım Buzz saçta hayat bulur.
+HS41,round,buzz,2,Saçlar biraz uzadığında denenebilir ancak yuvarlak yüzde kabarıklık riski taşır.
+HS42,round,buzz,0,Buzz kesim ile Wolf Cut yapısı birbirine tamamen zıt karakterdedir.
+HS01,rectangular,straight,4,Yanlara doğru doğal bir hacim ve akış sağladığı için dikdörtgen yüzün dikey etkisini mükemmel dengeler.
+HS02,rectangular,straight,1,Saçın dikey taranması yüzü olduğundan çok daha uzun göstereceği için bu yüz tipine uygun değildir.
+HS03,rectangular,straight,2,Yüzün uzunluğunu tamamen açıkta bırakır; ancak dengeli bir sakal hattıyla birlikte kullanılabilir.
+HS04,rectangular,straight,4,"Alındaki küt ve yatay hat, yüzün dikey boyunu optik olarak kısaltarak ideal dengeyi sağlar."
+HS05,rectangular,straight,3,"Klasik yan ayrım, nizamlı bir genişlik illüzyonu yaratarak yüzün uzunluğunu hafifletir."
+HS06,rectangular,straight,3,Yanların aşırı kısa olmaması yüzün zayıf görünmesini engeller ve dengeli bir çerçeve sunar.
+HS07,rectangular,straight,2,Fade geçişi yanları fazla inceltirse yüzün uzunluğu daha çok göze batabilir; dikkatli olunmalıdır.
+HS08,rectangular,straight,2,Fazla sade bir modeldir; dikdörtgen yüzde karakter yaratmakta zayıf kalabilir.
+HS09,rectangular,straight,0,Teknik uyumsuzluk; düz saç dokusu bu bukleli yapıyı oluşturmaz.
+HS10,rectangular,straight,0,Saç yapınız düz olduğu için bu kıvırcık kahkül dokusunu elde edemezsiniz.
+HS11,rectangular,straight,0,Teknik olarak imkansız; düz saçta bu hacimli bukleler oluşmaz.
+HS12,rectangular,straight,4,"Yüzü yanlardan çerçeveleyen düz tutamlar, dikey uzunluğu kamufle ederek yüzü daha oval gösterir."
+HS13,rectangular,straight,1,"Tepeye odaklanan dikey form, dikdörtgen yüzü aşırı derecede uzun ve dengesiz gösterir."
+HS14,rectangular,straight,4,Dikdörtgen yüzün en iyi dostudur. Alındaki yoğunluk yüz boyunu kısaltırken modern bir duruş sergiler.
+HS15,rectangular,straight,4,"Alnı tamamen kapatan düz doku, yüzün dikey alanını daraltmak için en etkili silahtır."
+HS16,rectangular,straight,1,"Yanların çok kısa, tepenin dar olması yüzü ""sırık"" gibi uzun gösterme riski taşır."
+HS17,rectangular,straight,3,"Alın hattını çok açmadan sağladığı nizamlı duruş, uzun yüzlerde elit bir denge kurar."
+HS18,rectangular,straight,2,"Yüzü tamamen açması uzunluğu vurgulayabilir, ancak saçın arkadaki kütlesi bir miktar denge sağlar."
+HS19,rectangular,straight,3,"Geçişin aşağıda olması yanlardaki dolgunluğu korur, bu da uzun yüzün daha geniş görünmesine yardımcı olur."
+HS20,rectangular,straight,1,Tepede toplanan saçlar yüzün dikey hattını iyice uzatarak estetik oranları bozar.
+HS21,rectangular,straight,4,"Yanlara düşen dağınık düz katlar, yüzün dikey etkisini kırarak daha dolgun ve dengeli bir form sunar."
+HS22,rectangular,straight,2,Yanların orta seviyede açılması dikdörtgen yüzlerde bazen fazla zayıf bir görüntü yaratabilir.
+HS23,rectangular,straight,1,Yüzün uzun kemik yapısını hiçbir dengeleyici unsur olmadan ortaya çıkaran sert bir kesimdir.
+HS24,rectangular,straight,3,"Arkadaki uzunluk, bakış açısını değiştirerek yüzün sadece dikey uzunluğa odaklanmasını engeller."
+HS25,rectangular,straight,1,Yüksek tepe hacmi dikdörtgen bir yüzü olduğundan iki kat daha uzun göstereceği için kaçınılmalıdır.
+HS26,rectangular,straight,2,Ön taraftaki yükseltme yüzü uzatır; ancak çok düşük hacimli tutulursa denenebilir.
+HS27,rectangular,straight,2,Çok düz ve nizamlıdır; dikdörtgen yüzü daha sert ve uzun gösterme eğilimindedir.
+HS28,rectangular,straight,3,Derli toplu ve yanal bir odak yarattığı için uzun yüzlerde profesyonel bir duruş sağlar.
+HS29,rectangular,straight,1,Dikey duran düz saçlar yüzün dikey hattını daha da belirginleştirir.
+HS30,rectangular,straight,4,Omuz hizası düz saçlar yüzün yanlarını doldurarak dikdörtgen formu en iyi gizleyen stildir.
+HS31,rectangular,straight,1,Yanların tamamen sıfırlanması yüzü aşırı derecede dar ve uzun gösterir.
+HS32,rectangular,straight,2,Yüzü tamamen odak noktası yapar; alnı açıkta bıraktığı için dikey uzunluk ön plandadır.
+HS33,rectangular,straight,0,Teknik uyumsuzluk; düz saçta kendiliğinden bu dalgalar oluşmaz.
+HS34,rectangular,straight,3,Alna yönlendirilen doku yüz boyunu kısaltır; modern ve dikdörtgen yüzle uyumlu bir seçimdir.
+HS35,rectangular,straight,1,Dikey hacim ve doku bu yüz tipinde orantısız bir uzunluk algısı yaratır.
+HS36,rectangular,straight,1,Tepedeki düğüm yüzün boyunu artırarak geometrik dengeyi tamamen bozar.
+HS37,rectangular,straight,2,Yanların aşırı kısa olması dikdörtgen yüzü fazla daraltabilir; üst kütle yana yatırılmalıdır.
+HS38,rectangular,straight,3,Üstteki uzunluğun yanlara doğru hacimli bir şekilde dökülmesi yüzü genişletmeye yardımcı olur.
+HS39,rectangular,straight,0,Düz saç dokusu bu modelin katlı ve hacimli dalga formunu karşılayamaz.
+HS40,rectangular,straight,0,Saçınızda doğal dalga olmadığı için bu formun o yumuşak geçişi elde edilemez.
+HS41,rectangular,straight,0,Teknik uyumsuzluk; dalgalı doku düz saç yapısıyla yakalanamaz.
+HS42,rectangular,straight,0,Düz saçta bu asimetrik ve hacimli dalga yoğunluğunu yakalamak mümkün değildir.
+HS01,rectangular,wavy/curly,4,"Dalgaların yanlara akışı, uzun yüzün dikey etkisini kırarak mükemmel bir genişlik illüzyonu sağlar."
+HS02,rectangular,wavy/curly,1,Saçı yukarı kaldırmak yüz boyunu aşırı uzatır; bu yüz tipi için kaçınılması gereken bir dikey hacimdir.
+HS03,rectangular,wavy/curly,2,Yüzün tüm uzunluğunu ortaya çıkarır; dalgalı dokunun dengeleyici gücünden mahrum kalırsınız.
+HS04,rectangular,wavy/curly,3,Alındaki dalgalı kısa hat yüzü kısaltır; dikdörtgen yüzler için antik ama modern bir dokunuştur.
+HS05,rectangular,wavy/curly,2,Nizamlı ayrım dalgalı saçta zor korunur ve uzun yüzü yeterince dengelemeyebilir.
+HS06,rectangular,wavy/curly,2,Temiz bir kesimdir ancak yüzü genişletme konusunda orta boy modeller kadar iddialı değildir.
+HS07,rectangular,wavy/curly,2,Yanların çok inceltilmesi (fade) dikdörtgen yüzü olduğundan daha sıska ve uzun gösterebilir.
+HS08,rectangular,wavy/curly,2,"Fonksiyonel bir modeldir ancak dalgalı saçın sunduğu ""yüzü dolgunlaştırma"" potansiyelini ıskalar."
+HS09,rectangular,wavy/curly,3,Yanlardaki kavisli geçiş yüze bir miktar dolgunluk katar; modern bir dengeleyicidir.
+HS10,rectangular,wavy/curly,4,Alna düşen bukleler yüz boyunu kısaltmak için birebirdir; modern ve çok dengeli bir duruş sergiler.
+HS11,rectangular,wavy/curly,4,"Yüzü çevreleyen yoğun bukleler, yanlarda hacim yaratarak uzun yüz formunu en iyi yumuşatan stildir."
+HS12,rectangular,wavy/curly,4,"Dalgalı tutamların yüzü çerçevelemesi, uzun yüzü daha kompakt ve oval bir forma sokar."
+HS13,rectangular,wavy/curly,1,Tepeye odaklanan kıvırcık doku yüzü gereğinden fazla uzatır; geometrik dengeyi bozar.
+HS14,rectangular,wavy/curly,4,Dalgalı dokunun alındaki yoğunluğu yüzü optik olarak kısaltır; uzun yüzler için zirve bir seçimdir.
+HS15,rectangular,wavy/curly,4,"Dağınık dalgaların alnı tamamen kapatması, yüzün dikey alanını daraltarak mükemmel oranlar yaratır."
+HS16,rectangular,wavy/curly,1,"Yanların sıfırlanması yüzün uzunluğunu bir ""sırık"" gibi vurgulama riski taşır."
+HS17,rectangular,wavy/curly,2,Uzun yüzde biraz sönük kalabilir; dikey dengeyi kurmakta dalgalı saçın diğer modellerine göre zayıftır.
+HS18,rectangular,wavy/curly,2,Alnı tamamen açık bıraktığı için dikey uzunluğu kamufle edemez.
+HS19,rectangular,wavy/curly,3,"Alçak fade yanlardaki dolgunluğu korur, bu da uzun yüzün daha geniş algılanmasını sağlar."
+HS20,rectangular,wavy/curly,1,Tepedeki topuz yüz hattını dikeyde iyice sivriltir; dikdörtgen yüz için riskli bir seçimdir.
+HS21,rectangular,wavy/curly,4,"Katlı dalgaların yarattığı yanal hacim, dikdörtgen yüzü dolgun gösteren en şık modellerdendir."
+HS22,rectangular,wavy/curly,2,Standart geçiş; uzun yüzün ihtiyacı olan genişlik illüzyonunu sağlamakta yetersiz kalır.
+HS23,rectangular,wavy/curly,1,"Uzun yüz hatlarını maskeleyebilecek hiçbir hacim sunmayan, yüzü çok çıplak bırakan bir kesimdir."
+HS24,rectangular,wavy/curly,3,"Arkadaki dalgalı hacim, bakış yönünü değiştirerek yüzün dikey uzunluğunu unutturur."
+HS25,rectangular,wavy/curly,1,"Dalgalı saçın devasa tepe hacmi, dikdörtgen bir yüzü orantısız derecede uzun gösterecektir."
+HS26,rectangular,wavy/curly,2,Ön taraftaki yükseltme uzun yüzü daha çok uzatır; hacim yanlara kaydırılmalıdır.
+HS27,rectangular,wavy/curly,1,"Dikdörtgen yüzün sertliğini dalgalı saçın yumuşaklığıyla kıramayan, fazla statik bir modeldir."
+HS28,rectangular,wavy/curly,2,Yanlarda yeterli genişliği oluşturamaz; yüzü olduğundan daha ince gösterme riski vardır.
+HS29,rectangular,wavy/curly,1,Yukarı bakan doku yüz boyunu artırarak geometrik dengeyi bozar.
+HS30,rectangular,wavy/curly,4,Omuzlara dökülen dalgalar yanak bölgesini doldurur; uzun yüzü en iyi dengeleyen stildir.
+HS31,rectangular,wavy/curly,1,Yanların yok edilmesi dikdörtgen yüzü aşırı derecede izole eder ve olduğundan uzun gösterir.
+HS32,rectangular,wavy/curly,2,Alın yapısını ortaya çıkardığı için dikey uzunluk dikdörtgen yüzde dezavantaja dönüşür.
+HS33,rectangular,wavy/curly,4,Doğal ve hacimli dalgalar yanlarda dolgunluk yaratarak yüzün uzunluğunu harika dengeler.
+HS34,rectangular,wavy/curly,2,Kareleşen dokular dikdörtgen yüzde bazen sönük kalabilir.
+HS35,rectangular,wavy/curly,1,Dikey yükseliş dikdörtgen yüzün oranlarını tamamen bozar; uzak durulmalıdır.
+HS36,rectangular,wavy/curly,1,"Yüzün en tepesindeki düğüm, dikey hattı zirveye taşıyarak uyumsuz bir görüntü yaratır."
+HS37,rectangular,wavy/curly,2,Yanların kısalığı üstteki dalgaları çok yüksekte bırakarak yüzü orantısız gösterir.
+HS38,rectangular,wavy/curly,3,"Üstteki uzun dalgalar yanlara dökülürse, yüzün üst kısmındaki köşeli yapıyı yumuşatır."
+HS39,rectangular,wavy/curly,4,Kat kat inen dalgalar hem yüzü çerçeveler hem de yanlardaki hacmiyle uzunluğu kamufle eder.
+HS40,rectangular,wavy/curly,3,Yan ayrımın dalgalı formu yanal bir odak noktası yaratarak yüzü dengeler.
+HS41,rectangular,wavy/curly,4,"Belirgin dalgalar ve dengeli yan geçişiyle, dikdörtgen yüzü modernize eden zirve kısa modellerdendir."
+HS42,rectangular,wavy/curly,4,"Asimetrik hacimli katlar, dikdörtgen yüzün ciddiyetini asi ve dengeli bir tarzla kırar."
+HS01,rectangular,buzz,0,Teknik uyumsuzluk; Buzz kısalığında bu akışkan formu yakalamak mümkün değildir.
+HS02,rectangular,buzz,1,Saçlar yukarı taranacak uzunlukta değildir; ayrıca dikey hacim dikdörtgen yüzü çok fazla uzatır.
+HS03,rectangular,buzz,2,Yüzün tüm dikey hattını ortaya çıkarır; ancak güçlü bir sakal hattıyla dengelenirse maskülen durabilir.
+HS04,rectangular,buzz,4,"Alındaki kısa ve yatay küt hat, dikdörtgen yüzün boyunu optik olarak kısaltan en iyi Buzz varyasyonudur."
+HS05,rectangular,buzz,0,Teknik uyumsuzluk; bu kısalıktaki saçta belirgin bir ayrım hattı oluşturulamaz.
+HS06,rectangular,buzz,3,Yanların hafif dolu bırakılması yüzün zayıf görünmesini engeller ve daha dengeli bir çerçeve sunar.
+HS07,rectangular,buzz,1,Üst kütle yana yatırılamayacak kadar kısadır; yüz boyunu kısaltma etkisi yaratmaz.
+HS08,rectangular,buzz,3,"Alın hattına yakın bırakılan minimal uzunluk, dikdörtgen yüzün dikey etkisini bir miktar yumuşatır."
+HS09,rectangular,buzz,0,Buzz seviyesinde kıvırcık doku oluşmaz; teknik olarak uygulanması mümkün değildir.
+HS10,rectangular,buzz,0,Yapısal olarak imkansız; Buzz kesim alna düşen bir kahkül yapısı barındırmaz.
+HS11,rectangular,buzz,0,Buzz saçın doğasına aykırı; uzunluk ve form bu modelle tamamen zıttır.
+HS12,rectangular,buzz,0,Teknik uyumsuzluk; bu kısalıkta ortadan ayrılan bir çerçeveleme yapılamaz.
+HS13,rectangular,buzz,1,"Tepedeki sivriltme, dikdörtgen yüzün halihazırdaki uzunluğunu aşırı vurgulayarak dengeyi bozar."
+HS14,rectangular,buzz,4,Üstteki hafif dokunun öne yönlendirilmesi yüz boyunu kısaltır; dikdörtgen yüzler için en tarz Buzz seçeneğidir.
+HS15,rectangular,buzz,0,Teknik uyumsuzluk; alna sarkan bir doku bu kesim tarzında mevcut değildir.
+HS16,rectangular,buzz,1,"Yanların aşırı kısalığı yüzü daraltırken tepedeki darlık yüzü ""sırık"" gibi uzun gösterir."
+HS17,rectangular,buzz,3,"Alın hattını çok açmadan sağladığı nizamlı duruş, uzun yüzlerde Buzz kesime göre daha seçkin durur."
+HS18,rectangular,buzz,0,Saçlar geriye taranacak uzunlukta değildir; teknik olarak uygulanamaz.
+HS19,rectangular,buzz,4,"Fade geçişinin aşağıda tutulması yanlardaki dolgunluğu korur, bu da uzun yüzün daha geniş görünmesini sağlar."
+HS20,rectangular,buzz,0,Teknik uyumsuzluk; Buzz saçın toplanamayacak kadar kısa olması modelle çelişir.
+HS21,rectangular,buzz,0,Buzz saç yapısında bu dağınık ve orta boy katmanlı yapı kurulamaz.
+HS22,rectangular,buzz,2,Yanların orta seviyede açılması dikdörtgen yüzü bazen fazla ince ve uzun gösterebilir.
+HS23,rectangular,buzz,1,"Uzun kemik yapısını hiçbir dengeleyici unsur olmadan ortaya çıkaran, yüzü olduğundan daha sıska gösteren bir kesimdir."
+HS24,rectangular,buzz,0,Teknik uyumsuzluk; Buzz kesim ensede bu derece bir uzunluk farkı barındırmaz.
+HS25,rectangular,buzz,0,Buzz saçta o karakteristik yüksek tepe hacmini oluşturmak teknik olarak imkansızdır.
+HS26,rectangular,buzz,1,Ön tarafta dikey yükselme sağlayacak saç uzunluğu olmadığı için model karakteri oluşmaz.
+HS27,rectangular,buzz,3,Çok nizamlı ve disiplinlidir; yanların çok açılmaması dikdörtgen yüz için bir avantajdır.
+HS28,rectangular,buzz,1,Buzz kısalığında doğal bir ayrım çizgisi oluşmaz; yüzün dikey hattını desteklemez.
+HS29,rectangular,buzz,1,Yukarı bakan kısa dokular yüzün boyunu optik olarak artırarak estetiği bozar.
+HS30,rectangular,buzz,0,Yapısal olarak imkansız; Buzz kesim omuz hizasına ulaşan bir uzunluk değildir.
+HS31,rectangular,buzz,1,Yanların tamamen sıfırlanması dikdörtgen yüzü aşırı derecede dar ve orantısız uzun gösterir.
+HS32,rectangular,buzz,0,Buzz saç yapısı pürüzsüzce arkaya yatırılabilecek bir yüzeye sahip değildir.
+HS33,rectangular,buzz,0,Kısa Buzz saçta dalga formu oluşması fiziksel olarak mümkün değildir.
+HS34,rectangular,buzz,4,Üstteki makas dokusu dikdörtgen yüzün dikey hattını kırarak daha modern ve dengeli bir ifade sunar.
+HS35,rectangular,buzz,1,Buzz saçta bu hacimli ve dokulu yükselişi sağlayacak malzeme yoktur.
+HS36,rectangular,buzz,0,Teknik uyumsuzluk; Buzz saçın tepe düğümü oluşturacak uzunluğu yoktur.
+HS37,rectangular,buzz,2,Yanların kısalığı üstteki Buzz dokuyu çok izole ederse yüz orantısız derecede uzun görünebilir.
+HS38,rectangular,buzz,0,"Buzz stile göre üstteki saçların uzun kalması gerekir, bu da temel kesimle uyumsuzdur."
+HS39,rectangular,buzz,0,Buzz saçta dalgalı ve katlı bir yapı kurulması mümkün değildir.
+HS40,rectangular,buzz,0,Teknik olarak imkansız; Buzz saçta ne dalga ne de ayrım hattı hayat bulur.
+HS41,rectangular,buzz,3,"Saçlar bir tık uzadığında hafif bir doku kazandırılması, uzun yüzün ciddiyetini yumuşatabilir."
+HS42,rectangular,buzz,0,Buzz kesim ile Wolf Cut yapısı birbirine tamamen zıt karakterdedir.
