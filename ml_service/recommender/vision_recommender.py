@@ -14,7 +14,8 @@ class VisionRecommender:
 
     def recommend(self, face_shape: str, hair_type: str, candidates: dict, preferences: dict):
         print("[VisionRecommender] Calling OpenAI Vision API for top 5 selection...")
-        sorted_candidates = sorted(candidates.items(), key=lambda x: x[1], reverse=True)
+        # Token tasarrufu için sadece en yüksek puanlı 15 adayı API'ye gönderelim
+        sorted_candidates = sorted(candidates.items(), key=lambda x: x[1], reverse=True)[:15]
         
         system_instruction = (
             "You are an expert hair stylist. "
@@ -38,13 +39,10 @@ class VisionRecommender:
             }
         ]
 
-        # Add images
+        # Sadece FRONT görsellerini 'low' detayla ekle ki token limitine (TPM) takılmayalım.
         for cid, score in sorted_candidates:
             url_front = self._get_image_url(cid, "front")
-            url_side = self._get_image_url(cid, "side")
-            
             messages[1]["content"].append({"type": "image_url", "image_url": {"url": url_front, "detail": "low"}})
-            messages[1]["content"].append({"type": "image_url", "image_url": {"url": url_side, "detail": "low"}})
 
         response = self.client.chat.completions.create(
             model="gpt-4o",
