@@ -3,12 +3,18 @@ import csv
 import requests
 import argparse
 import sys
+from dotenv import load_dotenv
+from PIL import Image
+from io import BytesIO
+
+load_dotenv()
+
+# Samples klasörü her zaman proje dizininde
+current_dir = os.path.dirname(os.path.abspath(__file__))
+SAMPLES_BASE_DIR = os.path.join(current_dir, 'samples')
 
 # Motoru (pipeline) içe aktar
 from engine_runner import AIEnginePipeline
-
-from PIL import Image
-from io import BytesIO
 
 def download_image_as_png(url, save_path):
     """Verilen URL'den görseli indirir ve her zaman PNG olarak kaydeder."""
@@ -16,8 +22,6 @@ def download_image_as_png(url, save_path):
         response = requests.get(url, stream=True, timeout=10)
         if response.status_code == 200:
             img = Image.open(BytesIO(response.content))
-            # RGBA (şeffaflık) varsa ve kaydederken sorun olmasın diye RGB'ye çevirebiliriz,
-            # ancak PNG şeffaflığı desteklediği için direkt kaydedebiliriz.
             img.save(save_path, format="PNG")
             return True
         return False
@@ -31,10 +35,8 @@ def main():
     args = parser.parse_args()
 
     sample_folder = args.sample
-    sample_id = sample_folder.replace("sample", "") # "sample3" -> "3"
-    
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    sample_dir_path = os.path.join(current_dir, 'samples', sample_folder)
+    sample_dir_path = os.path.join(SAMPLES_BASE_DIR, sample_folder)
+    print(f"Samples klasörü: {sample_dir_path}")
     
     # Klasör yoksa oluştur
     if not os.path.exists(sample_dir_path):
@@ -50,7 +52,7 @@ def main():
             
     if not user_img_path:
         print(f"HATA: '{sample_folder}' klasöründe 'user' ismini içeren bir fotoğraf bulunamadı.")
-        print(f"Lütfen '{sample_dir_path}' klasörünün içine kullanıcı fotoğrafını (Örn: user.jpg) ekleyin.")
+        print(f"Lütfen '{sample_dir_path}' klasörünün içine kullanıcı fotoğrafını (Örn: user.png) ekleyin.")
         return
 
     print(f"Kullanıcı fotoğrafı bulundu: {os.path.basename(user_img_path)}")
@@ -59,7 +61,6 @@ def main():
     print("\n=== 1. AŞAMA: ÖNERİ MOTORU ÇALIŞTIRILIYOR ===")
     pipeline = AIEnginePipeline()
     
-    # Test için varsayılan tercihler (İsterseniz parametre olarak dışarıdan da alabilirsiniz)
     prefs = {
         "hair_length": "medium",
         "maintenance": "low",
@@ -83,18 +84,15 @@ def main():
         print(f"HATA: {csv_path} dosyası bulunamadı!")
         return
 
-    # CSV'yi oku ve bir sözlüğe (dictionary) aktar
     url_map = {}
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
             url_map[row['hs_id']] = row['front_url']
             
-    # Görselleri sırayla indir
     for idx, hs_id in enumerate(top_5_ids):
         if hs_id in url_map:
             url = url_map[hs_id]
-            # Her zaman .png olarak kaydedelim
             save_filename = f"hairstyle_{idx+1}.png"
             save_path = os.path.join(sample_dir_path, save_filename)
             
@@ -109,7 +107,6 @@ def main():
             
     print(f"\n=== İŞLEM TAMAMLANDI ===")
     print(f"İndirilen tüm görseller '{sample_dir_path}' klasörüne kaydedildi.")
-    print("Artık bu klasörü doğrudan Colab'a yükleyebilir ve Virtual Try-On için kullanabilirsiniz.")
 
 if __name__ == "__main__":
     main()
