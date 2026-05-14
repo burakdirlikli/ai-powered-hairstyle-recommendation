@@ -1,83 +1,337 @@
-# AI Hairstyle Recommendation Engine
+<div align="center">
+  🌐 <b>Languages:</b> <a href="#english">English</a> | <a href="#türkçe">Türkçe</a>
+</div>
 
-> ⚠️ **Work In Progress (WIP)**
-> This project is currently under active development. Some important features are still missing or incomplete. Specifically, the integration of the recommendation system with the `virtual_try_on` module is not yet functional.
+<br>
 
-This project is an AI-powered recommendation engine that analyzes a user's face shape and current hair type to suggest the most suitable hairstyles based on personal preferences (hair length, maintenance, beard status, etc.).
+<a id="english"></a>
+# AI-Powered Hairstyle Recommendation & Virtual Try-On Pipeline (English)
 
-It is designed as an isolated and modular "AI Engine," utilizing OpenAI's Vision capabilities alongside traditional machine learning approaches.
+> 🚀 **Production-Ready Deployment**
+> This repository houses a fully complete, modular, and production-grade pipeline integrating advanced local machine learning recommendations with state-of-the-art serverless GPU Virtual Try-On (**HairFastGAN**) hosted on **Modal.com**.
 
-## Features
+---
 
-- **Face & Hair Analysis:** Predicts the user's face shape (oval, square, round, rectangular) and hair type (straight, wavy/curly, buzz) from a given photo.
-- **Candidate Selection:** Filters the best matching candidates from a database (CSV) of hairstyles based on the initial analysis.
-- **Smart Recommendation System:** Uses OpenAI Vision API (GPT-4o Vision) to recommend the top 5 hairstyles by taking the user's personal preferences into account.
-- **Virtual Try-On (WIP):** *Currently under development.* The infrastructure is being built to show how the selected hairstyles will look on the user's photo.
+## 📖 Architecture Overview
 
-## Prerequisites
+The system operates under a decoupled, two-tier architecture optimized for cost-efficiency, low latency, and robust failure isolation:
 
-- Python 3.8+
-- [OpenAI API Key](https://platform.openai.com/)
+```
++-------------------------------------------------------------------------+
+|                        LOCAL RECOMMENDATION ENGINE                      |
+|                                                                         |
+|  [Input Photo] ---> Face Shape & Hair Type Classifier                   |
+|                              |                                          |
+|                              v                                          |
+|                    Candidate Selection (CSV Catalog)                    |
+|                              |                                          |
+|                              v                                          |
+|                OpenAI GPT-4o Vision Scoring & Filtering                 |
+|                              |                                          |
+|                              v                                          |
+|             Outputs: Top-5 Hairstyle Reference IDs & URLs               |
++-------------------------------------------------------------------------+
+                                   |
+            Dynamic Session Routing & Base64 Payload Encapsulation
+                                   |
+                                   v
++-------------------------------------------------------------------------+
+|                  REMOTE CLOUD GPU BACKEND (MODAL.COM)                   |
+|                                                                         |
+|  POST https://...--swap-hairstyle.modal.run                             |
+|  --> Warm Container Cache (@modal.enter)                                |
+|  --> Persistent Volume Storage (/weights pre-loaded)                    |
+|  --> Multi-Model Neural Rendering (e4e, StyleGAN2, StarGANv2, SEAN)     |
+|  --> Output Swapped Image directly to Local Output Directory            |
++-------------------------------------------------------------------------+
+```
 
-## Installation
+### 1. Local Client-Side Engine
+- **Face & Hair Attribute Classification:** Automatically predicts geometric face shape (oval, square, round, rectangular) and core hair attributes from input selfies.
+- **Context-Aware Catalog Filtering:** Dynamically queries the local database (`data/hs_urls.csv`) to isolate compatible hairstyle archetypes.
+- **Generative AI Scoring:** Harnesses OpenAI's multimodal vision engine to cross-reference candidates against specified personal styles (maintenance tolerance, beard synergy, lifestyle usage).
 
-1. **Clone the Repository:**
+### 2. Serverless GPU Backend (Modal.com)
+- **HairFastGAN Virtual Try-On Engine:** Operates deep neural rendering backbones optimized for real-time photo-realistic hairstyle transfers.
+- **Build-Time Caching Optimization:** Critical deep learning checkpoints, including **CLIP (ViT-B/32)**, are securely downloaded and embedded inside the Docker container layers during the continuous integration compilation phase. This completely insulates runtime worker containers from unexpected network dropouts or `ConnectionResetError` exceptions.
+- **Persistent Weight Storage:** Integrates optimized persistent network storage volumes (`/weights`) populated with structural directory hierarchies to prevent broken path traversals during cold starts.
+- **Dependency Hardening:** Completely containerized over PyTorch Devel base images (`cuda11.8-cudnn8-devel`) with precise package pins (`numpy<2`, `gdown==5.1.0`) and core native build utilities (`cmake`, `dlib`) to guarantee seamless native C++ extension parsing.
+
+---
+
+## ✨ Core Features
+
+- **Zero-Config Dynamic Sessions:** Simply provide any input image path via the command line. The system automatically structures a fully isolated and timestamped workspace under `outputs/session_YYYYMMDD_HHMMSS/` containing sanitized copies, candidate references, and finalized output renderings.
+- **Interactive Try-On Sessions:** Run consecutive, non-blocking evaluations. Try out multiple suggested hairstyles sequentially without terminating or restarting the inference pipeline.
+- **Resilient Error Isolation:** Individual model generation failures are safely intercepted and captured as granular application metrics without crashing the core client flow.
+
+---
+
+## 🗂️ Project Structure
+
+```text
+recommendation-system/
+├── outputs/                      # Automated timestamped session history
+│   └── session_YYYYMMDD_HHMMSS/
+│       ├── input.png             # Standardized user selfie copy
+│       ├── recommendations/      # Downloaded Top-5 hairstyle catalog visuals
+│       └── results/              # Final Try-On visual compositions
+├── ml_service/
+│   ├── virtual_try_on/
+│   │   └── manager.py            # API client routing base64 images to Modal
+│   └── ...                       # Business logic & local classifiers
+├── data/
+│   └── hs_urls.csv               # Ground-truth catalog linking hairstyles to reference URLs
+├── modal_app.py                  # Serverless Modal app configuration & cloud container definitions
+├── prepare_sample.py             # Main CLI orchestrator initializing dynamic user flows
+├── engine_runner.py              # Primary interface powering backend candidate generation
+└── requirements.txt              # Local client dependencies
+```
+
+---
+
+## 🛠️ Local Setup & Installation
+
+### Prerequisites
+- **Python:** Version 3.10+ recommended.
+- **Git:** Make sure Git and Git-LFS are installed for repository syncing.
+
+### Step-by-Step Installation
+
+1. **Clone the Project:**
    ```bash
+   git clone <repository-url>
    cd recommendation-system
    ```
 
-2. **Create and Activate a Virtual Environment:**
+2. **Initialize an Isolated Environment:**
    ```bash
    python -m venv venv
-   # For Windows:
-   venv\Scripts\activate
-   # For macOS/Linux:
-   source venv/bin/activate
    ```
+   - **Windows:**
+     ```cmd
+     venv\Scripts\activate
+     ```
+   - **Linux / macOS:**
+     ```bash
+     source venv/bin/activate
+     ```
 
-3. **Install Dependencies:**
+3. **Install Client Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set Environment Variables:**
-   Open the `.env` file located in the project directory with a text editor and add your OpenAI API key:
-   ```env
-   OPENAI_API_KEY=sk-your-api-key-here
+---
+
+## ☁️ Deploying the Serverless GPU Backend
+
+Before executing client-side tasks, ensure the dedicated serverless backend app is running securely in your cloud workspace.
+
+1. **Authenticate Modal CLI:**
+   ```bash
+   modal setup
    ```
 
-## Usage
+2. **Deploy the Inference App:**
+   ```bash
+   modal deploy modal_app.py
+   ```
+   > **Note:** Upon successful initialization, the console outputs a persistent cloud service endpoint mapping directly to your authenticated environment.
 
-You can run the system via the command line. A user photo is required to run the engine.
+---
 
-To run with default settings:
+## 🚀 Execution Guide
+
+With your backend deployed, run full client inference using the newly implemented dynamic session engine.
+
+Simply pass the target user picture directly to the primary orchestrator:
+
 ```bash
-python engine_runner.py --image "samples/test_image.jpg"
+python prepare_sample.py --image "path/to/user_selfie.jpg"
 ```
 
-To run with specific user preferences, you can provide a JSON file (e.g., `prefs.json`):
+### Execution Flow:
+1. **Workspace Generation:** The script automatically instantiates a brand new target folder under `outputs/session_YYYYMMDD_HHMMSS/`.
+2. **Analysis & Recommendation:** Pre-trained modules evaluate face structures, rank candidates via AI engines, and securely populate `recommendations/` with reference downloads.
+3. **Interactive Multi-Pass Try-On:** The application triggers an ongoing interaction loop:
+   ```text
+   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter):
+   ```
+   - Enter `1`, `2`, `3`, etc., to pipe specific source configurations directly into cloud serverless instances.
+   - Finished images are persisted seamlessly to your local `results/` path.
+   - Press **Enter** to safely finalize the active session.
+
+---
+
+## 📜 License
+
+Developed as a highly decoupled production-grade visual evaluation module. All internal business implementations and related media artifacts are reserved.
+
+<br>
+<hr>
+<br>
+
+<a id="türkçe"></a>
+# Yapay Zeka Destekli Saç Modeli Öneri ve Sanal Deneme (Try-On) Hattı (Türkçe)
+
+> 🚀 **Üretime Hazır Mimari (Production-Ready)**
+> Bu depo, lokal makine öğrenimi tabanlı gelişmiş tavsiye motoru ile **Modal.com** üzerindeki yüksek performanslı sunucusuz GPU'larda koşan **HairFastGAN** sanal saç transferi (Virtual Try-On) altyapısını baştan sona entegre eden modüler bir projedir.
+
+---
+
+## 📖 Mimariye Genel Bakış
+
+Sistem, maliyet tasarrufu, düşük gecikme süresi ve hata izolasyonu sağlamak amacıyla iki katmanlı (decoupled) bir altyapıda çalışır:
+
+```
++-------------------------------------------------------------------------+
+|                         LOKAL ÖNERİ MOTORU KATMANI                      |
+|                                                                         |
+|  [Girdi Selfie] ---> Yüz Şekli ve Saç Tipi Sınıflandırıcısı             |
+|                              |                                          |
+|                              v                                          |
+|                   Aday Filtreleme (CSV Veritabanı)                      |
+|                              |                                          |
+|                              v                                          |
+|               OpenAI GPT-4o Vision ile Skorlama ve Seçim                |
+|                              |                                          |
+|                              v                                          |
+|             Çıktı: En İyi 5 Saç Modeli ID'si ve Görsel URL'i            |
++-------------------------------------------------------------------------+
+                                   |
+             Dinamik Oturum Yönetimi & Base64 Paketleme Akışı
+                                   |
+                                   v
++-------------------------------------------------------------------------+
+|                  BULUT GPU ARKA PLANI (MODAL.COM)                       |
+|                                                                         |
+|  POST https://...--swap-hairstyle.modal.run                             |
+|  --> Önceden Isıtılmış Bellek Önbelleği (@modal.enter)                  |
+|  --> Kalıcı Disk Birimi (Önceden yüklenmiş /weights klasörü)            |
+|  --> Çoklu Yapay Zeka Sentezi (e4e, StyleGAN2, StarGANv2, SEAN)         |
+|  --> Transferi Tamamlanan Görseli Doğrudan Lokal Dizine Yaz             |
++-------------------------------------------------------------------------+
+```
+
+### 1. Lokal İstemci Katmanı
+- **Yüz ve Saç Analizi:** Kullanıcının yüklediği fotoğraftan geometrik yüz şeklini (oval, kare, yuvarlak, dikdörtgen) ve mevcut saç yapısını otomatik olarak tahmin eder.
+- **Katalog Filtreleme:** Lokal veritabanını (`data/hs_urls.csv`) tarayarak analiz sonuçlarıyla eşleşen aday saç modellerini listeler.
+- **Üretken Yapay Zeka Puanlaması:** OpenAI'ın çoklu modlu (multimodal) görüntü işleme motorunu kullanarak adayları kullanıcının kişisel tercihleriyle (bakım zorluğu, sakal durumu, kullanım tarzı) çapraz sorgular ve en iyi 5 modeli belirler.
+
+### 2. Sunucusuz GPU Arka Planı (Modal.com)
+- **HairFastGAN Motoru:** Gerçek zamanlı ve fotoğraf gerçekliğinde saç transferleri yapabilen gelişmiş derin sinir ağı omurgalarını çalıştırır.
+- **Derleme Zamanı Önbellekleme (Build-Time Caching):** Container ayağa kalkarken yaşanabilecek anlık ağ kopmalarını veya `ConnectionResetError` hatalarını tamamen önlemek için, **CLIP (ViT-B/32)** gibi kritik model ağırlıkları imajın bulutta derlenme aşamasında (`run_commands`) indirilip kalıcı katmanlara gömülür.
+- **Kalıcı Ağırlık Depolaması:** İlk kurulumda kırık sembolik link (broken symlink) hatalarının önüne geçmek için optimize edilmiş bulut depolama birimleri (`/weights`) ve alt klasör hiyerarşileri kullanılır.
+- **Zırhlı Ortam Bağımlılıkları:** PyTorch Devel taban imajı (`cuda11.8-cudnn8-devel`) üzerinde `numpy<2` ve `gdown==5.1.0` gibi kararlı sürümler sabitlenmiş; yerel C++ uzantılarının sorunsuz derlenmesi için `cmake` ve `dlib` sistem kütüphaneleriyle güçlendirilmiştir.
+
+---
+
+## ✨ Temel Özellikler
+
+- **Sıfır Ayar Dinamik Oturumlar:** Terminalden herhangi bir resmin yolunu vermeniz yeterlidir. Sistem otomatik olarak `outputs/session_YYYYMMDD_HHMMSS/` formatında zaman damgalı izole bir oturum klasörü açar; orijinal resmi standartlaştırır, önerileri indirir ve nihai çıktıları tek bir yerde toplar.
+- **Etkileşimli Deneme Akışı:** Arka arkaya kesintisiz denemeler yapabilirsiniz. Betiği kapatıp açmaya gerek kalmadan motorun önerdiği saç modellerini sırayla konsol üzerinden seçip test edebilirsiniz.
+- **Hata İzolasyonu:** Modellerden birinde oluşabilecek herhangi bir matris veya hizalama hatası ana akışı çökertmez; loglanarak atlanır ve diğer modellerin denenmesine olanak tanır.
+
+---
+
+## 🗂️ Proje Yapısı
+
+```text
+recommendation-system/
+├── outputs/                      # Otomatik zaman damgalı oturum geçmişi
+│   └── session_YYYYMMDD_HHMMSS/
+│       ├── input.png             # Standartlaştırılmış kullanıcı fotoğrafı
+│       ├── recommendations/      # İndirilen en iyi 5 referans saç görseli
+│       └── results/              # Üretilen nihai Try-On sonuçları
+├── ml_service/
+│   ├── virtual_try_on/
+│   │   └── manager.py            # Base64 görsellerini Modal.com'a ileten istemci
+│   └── ...                       # İş mantığı ve sınıflandırma fonksiyonları
+├── data/
+│   └── hs_urls.csv               # Saç modellerini görsel URL'leriyle eşleyen veritabanı
+├── modal_app.py                  # Sunucusuz bulut GPU servisi ve imaj tanımları
+├── prepare_sample.py             # Dinamik akışı başlatan ana terminal betiği
+├── engine_runner.py              # Aday önerme algoritmalarını yöneten ana sınıf
+└── requirements.txt              # Lokal Python bağımlılıkları
+```
+
+---
+
+## 🛠️ Lokal Kurulum
+
+### Ön Koşullar
+- **Python:** 3.10 veya üzeri tavsiye edilir.
+- **Git:** Büyük dosyaların (model ağırlıkları vb.) çekilebilmesi için Git ve Git-LFS kurulu olmalıdır.
+
+### Adım Adım Kurulum
+
+1. **Projeyi Klonlayın:**
+   ```bash
+   git clone <repository-url>
+   cd recommendation-system
+   ```
+
+2. **Sanal Ortam Oluşturun ve Aktifleştirin:**
+   ```bash
+   python -m venv venv
+   ```
+   - **Windows:**
+     ```cmd
+     venv\Scripts\activate
+     ```
+   - **Linux / macOS:**
+     ```bash
+     source venv/bin/activate
+     ```
+
+3. **Gerekli Paketleri Yükleyin:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## ☁️ Bulut GPU Arka Planını Dağıtma (Deploy)
+
+Lokal betikleri çalıştırmadan önce, saç transferini yapacak olan bulut servisinin Modal.com üzerinde aktif olduğundan emin olun.
+
+1. **Modal CLI Kimlik Doğrulaması:**
+   ```bash
+   modal setup
+   ```
+
+2. **Servisi Buluta Gönderin:**
+   ```bash
+   modal deploy modal_app.py
+   ```
+   > **Not:** Kurulum başarıyla tamamlandığında konsol size doğrudan bulut ortamınızla eşleşen kalıcı bir servis URL'i çıktısı verecektir.
+
+---
+
+## 🚀 Kullanım Rehberi
+
+Arka plan servisiniz bulutta hazır olduktan sonra, yeni dinamik oturum motorunu kullanarak analiz ve deneme işlemlerini başlatabilirsiniz.
+
+Kullanıcının fotoğrafını doğrudan ana betiğe parametre olarak verin:
+
 ```bash
-python engine_runner.py --image "samples/test_image.jpg" --prefs "samples/prefs.json"
+python prepare_sample.py --image "resimler/ornek_kullanici.jpg"
 ```
 
-### Example Preferences JSON Format
-```json
-{
-    "hair_length": "medium",
-    "maintenance": "low",
-    "beard": "yes",
-    "usage": "casual"
-}
-```
+### Akış Senaryosu:
+1. **Oturum Açma:** Betik `outputs/session_YYYYMMDD_HHMMSS/` adında yepyeni bir dizin hazırlar.
+2. **Analiz ve Öneri:** Yüz hatları analiz edilir, OpenAI destekli motor en uygun 5 modeli seçer ve görsellerini `recommendations/` klasörüne indirir.
+3. **Konsol Üzerinden Canlı Deneme:** Uygulama size konsolda şu soruyu yöneltir:
+   ```text
+   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter):
+   ```
+   - `1`, `2`, `3` gibi sayılar girerek dilediğiniz saçı anında bulut sunucusunda kendi resminize uygulayabilirsiniz.
+   - Tamamlanan resimler otomatik olarak lokaldeki `results/` klasörüne kaydedilir.
+   - İşlemi sonlandırmak istediğinizde sadece **Enter** tuşuna basmanız yeterlidir.
 
-## Project Structure
+---
 
-- `engine_runner.py`: The main orchestration script. It combines the analysis, selection, and recommendation steps.
-- `ml_service/`: Directory containing machine learning models, prediction functions, and AI business logic.
-- `data/`: Contains the hairstyle database (`hs_definitions.csv`) and related metadata.
-- `requirements.txt`: Lists project dependencies.
-- `test_genai_run.py`: Utility script used for testing Generative AI (GenAI) components.
+## 📜 Lisans
 
-## License
-
-This project is developed for personal/educational purposes. All rights reserved.
+Gelişmiş ve izole bir yapay zeka modülü olarak tasarlanmıştır. Tüm hakları saklıdır.
