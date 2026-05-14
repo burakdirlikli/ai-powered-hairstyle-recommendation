@@ -88,18 +88,11 @@ class AIEnginePipeline:
             sorted_cands = sorted(candidates.items(), key=lambda x: x[1], reverse=True)
             top_5_ids = [cid for cid, score in sorted_cands[:5]]
             
-        # Step 4 (Gelecek Özellik): Virtual Try-On
-        try:
-            try_on_report = self.try_on_manager.run_comparison(image_path, top_5_ids)
-        except NotImplementedError:
-            print("\n[Warning] Virtual Try-On not implemented yet. Skipping.")
-            try_on_report = None
-        
+        # Step 4: Virtual Try-On (Artık prepare_sample.py / Backend tarafında, indirmeler bitince çağrılıyor)
         print("\n=== PIPELINE COMPLETED ===")
         print(f"Top 5 Recommendations: {top_5_ids}")
-        print("Virtual Try-On Skeleton Executed successfully.")
-        
-        return top_5_ids, try_on_report
+
+        return top_5_ids, None
 
 
 if __name__ == "__main__":

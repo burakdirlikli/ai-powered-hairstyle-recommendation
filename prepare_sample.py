@@ -16,6 +16,10 @@ SAMPLES_BASE_DIR = os.path.join(current_dir, 'samples')
 # Motoru (pipeline) içe aktar
 from engine_runner import AIEnginePipeline
 
+# ml_service dizinini path'e ekle ve VirtualTryOnManager'ı içe aktar
+sys.path.append(os.path.join(current_dir, 'ml_service'))
+from virtual_try_on.manager import VirtualTryOnManager
+
 def download_image_as_png(url, save_path):
     """Verilen URL'den görseli indirir ve her zaman PNG olarak kaydeder."""
     try:
@@ -30,32 +34,37 @@ def download_image_as_png(url, save_path):
         return False
 
 def main():
-    parser = argparse.ArgumentParser(description="Verilen sample klasörü için tavsiye motorunu çalıştırıp referans saç görsellerini indirir.")
-    parser.add_argument('--sample', type=str, required=True, help="Örnek klasör adı (Örn: sample3)")
+    import datetime
+    parser = argparse.ArgumentParser(description="Kullanıcı fotoğrafını alıp benzersiz bir oturum klasörü oluşturur ve tavsiye/Try-On motorunu çalıştırır.")
+    parser.add_argument('--image', type=str, required=True, help="Kullanıcının girdi fotoğrafının yolu (Örn: resimler/ben.jpg)")
     args = parser.parse_args()
 
-    sample_folder = args.sample
-    sample_dir_path = os.path.join(SAMPLES_BASE_DIR, sample_folder)
-    print(f"Samples klasörü: {sample_dir_path}")
-    
-    # Klasör yoksa oluştur
-    if not os.path.exists(sample_dir_path):
-        os.makedirs(sample_dir_path, exist_ok=True)
-        print(f"Klasör oluşturuldu: {sample_dir_path}")
-        
-    # User görselini bul (içinde 'user' geçen ilk .png/.jpg dosyası)
-    user_img_path = None
-    for f in os.listdir(sample_dir_path):
-        if 'user' in f.lower() and f.lower().endswith(('.png', '.jpg', '.jpeg')):
-            user_img_path = os.path.join(sample_dir_path, f)
-            break
-            
-    if not user_img_path:
-        print(f"HATA: '{sample_folder}' klasöründe 'user' ismini içeren bir fotoğraf bulunamadı.")
-        print(f"Lütfen '{sample_dir_path}' klasörünün içine kullanıcı fotoğrafını (Örn: user.png) ekleyin.")
+    input_image_path = args.image
+    if not os.path.exists(input_image_path):
+        print(f"HATA: Girdi fotoğrafı bulunamadı: {input_image_path}")
         return
 
-    print(f"Kullanıcı fotoğrafı bulundu: {os.path.basename(user_img_path)}")
+    # Benzersiz oturum klasörü oluştur: outputs/session_YYYYMMDD_HHMMSS
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    session_folder_name = f"session_{timestamp}"
+    outputs_base_dir = os.path.join(current_dir, "outputs")
+    sample_dir_path = os.path.join(outputs_base_dir, session_folder_name)
+    
+    os.makedirs(sample_dir_path, exist_ok=True)
+    print(f"\n📁 Yeni Oturum Klasörü Oluşturuldu: {sample_dir_path}")
+
+    # Girdi fotoğrafını oturum klasörüne 'input.png' olarak standartlaştırıp kaydet
+    try:
+        img = Image.open(input_image_path)
+        # RGB'ye çevirerek alfa kanalı sorunlarını önle
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+        user_img_path = os.path.join(sample_dir_path, "input.png")
+        img.save(user_img_path, format="PNG")
+        print(f"✅ Girdi fotoğrafı kopyalandı: {os.path.join(session_folder_name, 'input.png')}")
+    except Exception as e:
+        print(f"HATA: Görüntü okunamadı veya kopyalanamadı: {e}")
+        return
     
     # 1. Öneri Motorunu Çalıştır
     print("\n=== 1. AŞAMA: ÖNERİ MOTORU ÇALIŞTIRILIYOR ===")
@@ -78,6 +87,9 @@ def main():
     
     # 2. URL'leri Bul ve Görselleri İndir
     print("\n=== 2. AŞAMA: REFERANS SAÇ GÖRSELLERİ İNDİRİLİYOR ===")
+    recommendations_dir = os.path.join(sample_dir_path, "recommendations")
+    os.makedirs(recommendations_dir, exist_ok=True)
+
     csv_path = os.path.join(current_dir, 'data', 'hs_urls.csv')
     
     if not os.path.exists(csv_path):
@@ -94,9 +106,9 @@ def main():
         if hs_id in url_map:
             url = url_map[hs_id]
             save_filename = f"hairstyle_{idx+1}.png"
-            save_path = os.path.join(sample_dir_path, save_filename)
+            save_path = os.path.join(recommendations_dir, save_filename)
             
-            print(f"[{idx+1}/5] İndiriliyor: {hs_id} -> {save_filename} ...", end=" ")
+            print(f"[{idx+1}/5] İndiriliyor: {hs_id} -> {os.path.join('recommendations', save_filename)} ...", end=" ")
             success = download_image_as_png(url, save_path)
             if success:
                 print("BAŞARILI")
@@ -106,7 +118,35 @@ def main():
             print(f"UYARI: {hs_id} modeli için CSV'de URL bulunamadı.")
             
     print(f"\n=== İŞLEM TAMAMLANDI ===")
-    print(f"İndirilen tüm görseller '{sample_dir_path}' klasörüne kaydedildi.")
+    print(f"İndirilen tüm öneri görselleri '{recommendations_dir}' klasörüne kaydedildi.")
+
+    # 3. İsteğe Bağlı / Etkileşimli Virtual Try-On Seçimi
+    if os.getenv("MODAL_ENDPOINT_URL"):
+        print("\n=== 3. AŞAMA: VIRTUAL TRY-ON (MODAL.COM GPU SERVISİ) ===")
+        while True:
+            choice = input("\nÖnerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter): ").strip()
+            if not choice:
+                print("\nVirtual Try-On oturumu sonlandırıldı.")
+                break
+                
+            if choice.isdigit() and 1 <= int(choice) <= 5:
+                selected_num = int(choice)
+                selected_hs_path = os.path.join(recommendations_dir, f"hairstyle_{selected_num}.png")
+                
+                if os.path.exists(selected_hs_path):
+                    print(f"\nSeçilen model (hairstyle_{selected_num}.png) bulut GPU'ya aktarılıyor. Bu işlem 10-20 saniye sürebilir...")
+                    try:
+                        try_on_manager = VirtualTryOnManager()
+                        try_on_manager.run_single_try_on(user_img_path, selected_hs_path, selected_num)
+                        print("\n🎉 Virtual Try-On başarıyla tamamlandı! Çıktıyı 'results' klasöründen inceleyebilirsiniz.")
+                    except Exception as e:
+                        print(f"\n❌ Virtual Try-On aşamasında hata: {e}")
+                else:
+                    print(f"\nHATA: {selected_hs_path} dosyası bulunamadı.")
+            else:
+                print("Lütfen 1 ile 5 arasında geçerli bir sayı girin veya çıkmak için Enter'a basın.")
+    else:
+        print("\n[Bilgi] MODAL_ENDPOINT_URL .env dosyasında bulunamadı. Virtual Try-On aşaması atlandı.")
 
 if __name__ == "__main__":
     main()
