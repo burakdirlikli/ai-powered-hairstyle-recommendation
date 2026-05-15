@@ -3,22 +3,17 @@ import csv
 import requests
 import argparse
 import sys
+import datetime
 from dotenv import load_dotenv
 from PIL import Image
 from io import BytesIO
 
 load_dotenv()
 
-# Samples klasörü her zaman proje dizininde
 current_dir = os.path.dirname(os.path.abspath(__file__))
-SAMPLES_BASE_DIR = os.path.join(current_dir, 'samples')
 
 # Motoru (pipeline) içe aktar
 from engine_runner import AIEnginePipeline
-
-# ml_service dizinini path'e ekle ve VirtualTryOnManager'ı içe aktar
-sys.path.append(os.path.join(current_dir, 'ml_service'))
-from virtual_try_on.manager import VirtualTryOnManager
 
 def download_image_as_png(url, save_path):
     """Verilen URL'den görseli indirir ve her zaman PNG olarak kaydeder."""
@@ -34,8 +29,7 @@ def download_image_as_png(url, save_path):
         return False
 
 def main():
-    import datetime
-    parser = argparse.ArgumentParser(description="Kullanıcı fotoğrafını alıp benzersiz bir oturum klasörü oluşturur ve tavsiye/Try-On motorunu çalıştırır.")
+    parser = argparse.ArgumentParser(description="Kullanıcı fotoğrafını alıp benzersiz bir oturum klasörü oluşturur ve tavsiye motorunu çalıştırır.")
     parser.add_argument('--image', type=str, required=True, help="Kullanıcının girdi fotoğrafının yolu (Örn: resimler/ben.jpg)")
     args = parser.parse_args()
 
@@ -48,18 +42,17 @@ def main():
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     session_folder_name = f"session_{timestamp}"
     outputs_base_dir = os.path.join(current_dir, "outputs")
-    sample_dir_path = os.path.join(outputs_base_dir, session_folder_name)
+    session_dir_path = os.path.join(outputs_base_dir, session_folder_name)
     
-    os.makedirs(sample_dir_path, exist_ok=True)
-    print(f"\n📁 Yeni Oturum Klasörü Oluşturuldu: {sample_dir_path}")
+    os.makedirs(session_dir_path, exist_ok=True)
+    print(f"\n📁 Yeni Oturum Klasörü Oluşturuldu: {session_dir_path}")
 
     # Girdi fotoğrafını oturum klasörüne 'input.png' olarak standartlaştırıp kaydet
     try:
         img = Image.open(input_image_path)
-        # RGB'ye çevirerek alfa kanalı sorunlarını önle
         if img.mode != "RGB":
             img = img.convert("RGB")
-        user_img_path = os.path.join(sample_dir_path, "input.png")
+        user_img_path = os.path.join(session_dir_path, "input.png")
         img.save(user_img_path, format="PNG")
         print(f"✅ Girdi fotoğrafı kopyalandı: {os.path.join(session_folder_name, 'input.png')}")
     except Exception as e:
@@ -87,7 +80,7 @@ def main():
     
     # 2. URL'leri Bul ve Görselleri İndir
     print("\n=== 2. AŞAMA: REFERANS SAÇ GÖRSELLERİ İNDİRİLİYOR ===")
-    recommendations_dir = os.path.join(sample_dir_path, "recommendations")
+    recommendations_dir = os.path.join(session_dir_path, "recommendations")
     os.makedirs(recommendations_dir, exist_ok=True)
 
     csv_path = os.path.join(current_dir, 'data', 'hs_urls.csv')
@@ -119,34 +112,8 @@ def main():
             
     print(f"\n=== İŞLEM TAMAMLANDI ===")
     print(f"İndirilen tüm öneri görselleri '{recommendations_dir}' klasörüne kaydedildi.")
-
-    # 3. İsteğe Bağlı / Etkileşimli Virtual Try-On Seçimi
-    if os.getenv("MODAL_ENDPOINT_URL"):
-        print("\n=== 3. AŞAMA: VIRTUAL TRY-ON (MODAL.COM GPU SERVISİ) ===")
-        while True:
-            choice = input("\nÖnerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter): ").strip()
-            if not choice:
-                print("\nVirtual Try-On oturumu sonlandırıldı.")
-                break
-                
-            if choice.isdigit() and 1 <= int(choice) <= 5:
-                selected_num = int(choice)
-                selected_hs_path = os.path.join(recommendations_dir, f"hairstyle_{selected_num}.png")
-                
-                if os.path.exists(selected_hs_path):
-                    print(f"\nSeçilen model (hairstyle_{selected_num}.png) bulut GPU'ya aktarılıyor. Bu işlem 10-20 saniye sürebilir...")
-                    try:
-                        try_on_manager = VirtualTryOnManager()
-                        try_on_manager.run_single_try_on(user_img_path, selected_hs_path, selected_num)
-                        print("\n🎉 Virtual Try-On başarıyla tamamlandı! Çıktıyı 'results' klasöründen inceleyebilirsiniz.")
-                    except Exception as e:
-                        print(f"\n❌ Virtual Try-On aşamasında hata: {e}")
-                else:
-                    print(f"\nHATA: {selected_hs_path} dosyası bulunamadı.")
-            else:
-                print("Lütfen 1 ile 5 arasında geçerli bir sayı girin veya çıkmak için Enter'a basın.")
-    else:
-        print("\n[Bilgi] MODAL_ENDPOINT_URL .env dosyasında bulunamadı. Virtual Try-On aşaması atlandı.")
+    print(f"\nSanal deneme (Virtual Try-On) işlemini başlatmak için aşağıdaki komutu kullanın:\n")
+    print(f"python run_tryon.py --session \"{session_dir_path}\"\n")
 
 if __name__ == "__main__":
     main()

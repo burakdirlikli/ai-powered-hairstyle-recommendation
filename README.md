@@ -83,7 +83,8 @@ recommendation-system/
 ├── data/
 │   └── hs_urls.csv               # Ground-truth catalog linking hairstyles to reference URLs
 ├── modal_app.py                  # Serverless Modal app configuration & cloud container definitions
-├── prepare_sample.py             # Main CLI orchestrator initializing dynamic user flows
+├── run_recommendation.py         # Step 1: AI recommendation script to build session folder
+├── run_tryon.py                  # Step 2: Interactive Try-On script executing Modal inference
 ├── engine_runner.py              # Primary interface powering backend candidate generation
 └── requirements.txt              # Local client dependencies
 ```
@@ -145,22 +146,29 @@ Before executing client-side tasks, ensure the dedicated serverless backend app 
 
 With your backend deployed, run full client inference using the newly implemented dynamic session engine.
 
-Simply pass the target user picture directly to the primary orchestrator:
+The workflow is divided into two highly modular scripts.
+
+### Step 1: Analysis & Recommendation
+Pass the target user picture directly to the recommendation engine:
 
 ```bash
-python prepare_sample.py --image "path/to/user_selfie.jpg"
+python run_recommendation.py --image "path/to/user_selfie.jpg"
 ```
+- **Workspace Generation:** Automatically instantiates a brand new target folder under `outputs/session_YYYYMMDD_HHMMSS/`.
+- **Candidate Downloads:** Evaluates face structures, ranks candidates, and securely populates `recommendations/` with reference images.
 
-### Execution Flow:
-1. **Workspace Generation:** The script automatically instantiates a brand new target folder under `outputs/session_YYYYMMDD_HHMMSS/`.
-2. **Analysis & Recommendation:** Pre-trained modules evaluate face structures, rank candidates via AI engines, and securely populate `recommendations/` with reference downloads.
-3. **Interactive Multi-Pass Try-On:** The application triggers an ongoing interaction loop:
+### Step 2: Virtual Try-On Execution
+Using the generated session folder, initiate the interactive Try-On interface:
+
+```bash
+python run_tryon.py --session "outputs/session_YYYYMMDD_HHMMSS"
+```
+- **Interactive Multi-Pass Try-On:** The application triggers an ongoing loop to test multiple top hairstyles interactively:
    ```text
-   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter):
+   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak için Enter):
    ```
-   - Enter `1`, `2`, `3`, etc., to pipe specific source configurations directly into cloud serverless instances.
-   - Finished images are persisted seamlessly to your local `results/` path.
-   - Press **Enter** to safely finalize the active session.
+- Enter `1`, `2`, `3`, etc., to pipe specific source configurations directly into cloud serverless instances.
+- Finished swap images are persisted seamlessly to your local `results/` folder inside the session directory.
 
 ---
 
@@ -251,7 +259,8 @@ recommendation-system/
 ├── data/
 │   └── hs_urls.csv               # Saç modellerini görsel URL'leriyle eşleyen veritabanı
 ├── modal_app.py                  # Sunucusuz bulut GPU servisi ve imaj tanımları
-├── prepare_sample.py             # Dinamik akışı başlatan ana terminal betiği
+├── run_recommendation.py         # Adım 1: Oturum klasörü oluşturan AI analiz/öneri betiği
+├── run_tryon.py                  # Adım 2: Modal bulutunda deneme işlemini yapan etkileşimli betik
 ├── engine_runner.py              # Aday önerme algoritmalarını yöneten ana sınıf
 └── requirements.txt              # Lokal Python bağımlılıkları
 ```
@@ -313,22 +322,29 @@ Lokal betikleri çalıştırmadan önce, saç transferini yapacak olan bulut ser
 
 Arka plan servisiniz bulutta hazır olduktan sonra, yeni dinamik oturum motorunu kullanarak analiz ve deneme işlemlerini başlatabilirsiniz.
 
-Kullanıcının fotoğrafını doğrudan ana betiğe parametre olarak verin:
+İş akışı daha modüler bir yapı sağlamak için iki ayrı betiğe ayrılmıştır.
+
+### Adım 1: Analiz ve Öneri
+Kullanıcının fotoğrafını doğrudan öneri motoruna parametre olarak verin:
 
 ```bash
-python prepare_sample.py --image "resimler/ornek_kullanici.jpg"
+python run_recommendation.py --image "resimler/ornek_kullanici.jpg"
 ```
+- **Oturum Açma:** Betik `outputs/session_YYYYMMDD_HHMMSS/` adında yepyeni bir dizin hazırlar.
+- **Aday İndirme:** Yüz hatları analiz edilir, OpenAI destekli motor en uygun 5 modeli seçer ve referans görsellerini `recommendations/` klasörüne indirir. İşlem sonunda oluşturulan oturum dizininin adını verir.
 
-### Akış Senaryosu:
-1. **Oturum Açma:** Betik `outputs/session_YYYYMMDD_HHMMSS/` adında yepyeni bir dizin hazırlar.
-2. **Analiz ve Öneri:** Yüz hatları analiz edilir, OpenAI destekli motor en uygun 5 modeli seçer ve görsellerini `recommendations/` klasörüne indirir.
-3. **Konsol Üzerinden Canlı Deneme:** Uygulama size konsolda şu soruyu yöneltir:
+### Adım 2: Sanal Deneme (Virtual Try-On)
+Oluşturulan oturum klasörünü kullanarak etkileşimli deneme akışını başlatın:
+
+```bash
+python run_tryon.py --session "outputs/session_YYYYMMDD_HHMMSS"
+```
+- **Konsol Üzerinden Canlı Deneme:** Uygulama size konsolda şu soruyu yöneltir ve bir döngüye girer:
    ```text
-   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak/atlamak için Enter):
+   Önerilen saç modellerinden hangisini denemek istersiniz? (1-5 arası bir sayı yazın, çıkmak için Enter):
    ```
-   - `1`, `2`, `3` gibi sayılar girerek dilediğiniz saçı anında bulut sunucusunda kendi resminize uygulayabilirsiniz.
-   - Tamamlanan resimler otomatik olarak lokaldeki `results/` klasörüne kaydedilir.
-   - İşlemi sonlandırmak istediğinizde sadece **Enter** tuşuna basmanız yeterlidir.
+- `1`, `2`, `3` gibi sayılar girerek dilediğiniz saçı anında bulut sunucusunda kendi resminize uygulayabilirsiniz.
+- Tamamlanan resimler otomatik olarak ilgili oturumun içerisindeki lokal `results/` klasörüne kaydedilir.
 
 ---
 
