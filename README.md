@@ -152,8 +152,10 @@ The workflow is divided into two highly modular scripts.
 Pass the target user picture directly to the recommendation engine:
 
 ```bash
-python run_recommendation.py --image "path/to/user_selfie.jpg"
+python run_recommendation.py --image "test-user.png"
 ```
+> **Note:** To test with your own photo, provide the full absolute or relative path to the image (e.g., `--image "C:\Users\username\Desktop\my_photo.jpg"`).
+
 - **Workspace Generation:** Automatically instantiates a brand new target folder under `outputs/session_YYYYMMDD_HHMMSS/`.
 - **Candidate Downloads:** Evaluates face structures, ranks candidates, and securely populates `recommendations/` with reference images.
 
@@ -328,8 +330,10 @@ Arka plan servisiniz bulutta hazır olduktan sonra, yeni dinamik oturum motorunu
 Kullanıcının fotoğrafını doğrudan öneri motoruna parametre olarak verin:
 
 ```bash
-python run_recommendation.py --image "resimler/ornek_kullanici.jpg"
+python run_recommendation.py --image "test-user.png"
 ```
+> **Not:** Kendi fotoğrafınızla denemek isterseniz, görselin bilgisayarınızdaki tam yolunu (tam dosya dizinini) veya göreceli yolunu vermeniz gerekmektedir (Örn: `--image "C:\Kullanicilar\isim\Masaustu\fotograf.jpg"`).
+
 - **Oturum Açma:** Betik `outputs/session_YYYYMMDD_HHMMSS/` adında yepyeni bir dizin hazırlar.
 - **Aday İndirme:** Yüz hatları analiz edilir, OpenAI destekli motor en uygun 5 modeli seçer ve referans görsellerini `recommendations/` klasörüne indirir. İşlem sonunda oluşturulan oturum dizininin adını verir.
 
